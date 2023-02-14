@@ -29,8 +29,8 @@ pgAdmin 4(pgAdminはうまく使えなかったらA5SQL等を使います)
 
 
 #### (進め方と課題)  
-前提として、EclipseのTerminalでgradle buildが通るか確認しながら進める。  
-
+前提として、EclipseのTerminalで、cdでプロジェクトのルートフォルダに移動し、  
+gradle buildが通るか確認しながら進める。  
 
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、下記を優先で実施します。  
@@ -204,7 +204,8 @@ user_interfaceプロジェクトをクリックして、デバッグ → Spring 
 
 
 ## Gradle build
-EclipseのTerminalでgradle buildを実行し、ビルドが通るか確認しながら進めて下さい。  
+EclipseのTerminalで、cdでプロジェクトのルートフォルダに移動し、  
+gradle buildを実行し、ビルドが通るか確認しながら進めて下さい。  
 
 
 #### (注意事項)
