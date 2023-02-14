@@ -33,7 +33,7 @@ pgAdmin 4(pgAdminはうまく使えなかったらA5SQL等を使います)
 
 
 * ①直近で実現したいこと **************************************************  
-ここでは例としてPersonクラスを使用し、下記を優先で実施します。。  
+ここでは例としてPersonクラスを使用し、下記を優先で実施します。  
 
 ・PersonController, PersonServiceでSpring DIを利用できるようにする。  
 ・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
