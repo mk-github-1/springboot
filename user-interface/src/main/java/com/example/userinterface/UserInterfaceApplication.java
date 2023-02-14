@@ -13,12 +13,12 @@ import com.example.applicationservice.service.master.*;
 public class UserInterfaceApplication {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("unused")
+		// Application起動時に実行したいDIはここに記載
+		/*
 		ApplicationContext app = new AnnotationConfigApplicationContext(SpringDiConfig.class);
-		
-		@SuppressWarnings("unused")
 		PersonService personService = app.getBean(PersonService.class);
-		
+		 */
+
 		SpringApplication.run(UserInterfaceApplication.class, args);
 	}
 
