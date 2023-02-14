@@ -25,7 +25,8 @@ pgAdmin 4(pgAdminはうまく使えなかったらA5SQL等を使います)
 ## (やりたいこと)
 
 #### (全体イメージ)  
-![自習アプリ作成の概要](https://user-images.githubusercontent.com/32920703/218566579-a6e46ed3-a721-474e-9ec3-4375717d6227.png)
+![自習アプリ作成の概要](https://user-images.githubusercontent.com/32920703/218778468-d0df6e7e-dd67-4ebc-9114-6b9c745dd639.png)
+
 
 #### (進め方と課題)  
 前提として、EclipseのTerminalでgradle buildが通るか確認しながら進める。  
