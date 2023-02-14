@@ -3,7 +3,7 @@
 SpringBoot3 + React (gradleマルチプロジェクト)で、  
 SPA + Web APIでのCRUDなWebアプリケーションを作成するための自習用のリポジトリです。  
 
-クライアント側はReactのシングルページアプリケーションで動き、  
+クライアント側はReactのシングルページアプリケーション(javascript管理下)で動き、  
 アプリケーションはログイン認証機能を持ち、サーバー側はAPIとして受付し、  
 DBの操作を行うことができるアプリケーションを構築します。  
 誰にでも理解しやすいシンプルなものを構築したいと思います。  
@@ -30,49 +30,45 @@ pgAdmin 4(pgAdminはうまく使えなかったらA5SQL等を使います)
 #### (進め方と課題)  
 前提として、EclipseのTerminalでgradle buildが通るか確認しながら進める。  
 
-①Spring DIを利用できるようにする。
-Spring DIの利用方法を調査中。
 
-②ORMを選定して、サーバー側のプログラムを一通り実装  
-例としてPersonクラスを使用。Entityを直接操作して、独自のRepositoryを作成したいので調査中。  
-EntityクラスとModelクラスを分けるべきか検討中。  
+* ①直近で実現したいこと **************************************************
+ここでは例としてPersonクラスを使用し、下記を優先で実施します。。  
 
-データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
+・PersonController, PersonServiceでSpring DIを利用できるようにする。  
+・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
+・EntityクラスとModelクラスを分けるべきか検討中。  
+・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。  
+・indexからPersonControllerにAPIアクセスする。  ※この時点ではPersonのhtmlをサーバーサイドレンダリングしてよい。  
+・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
 
-③Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする  
+※SpringSecutiryが邪魔するかもしれないので一旦OFFにしておいてもOK。
+
+**************************************************
+
+②Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする  
 webpack.config.jsの設定をして、javascriptをモジュールとして使用できるようにする。  
 ただし、webpack.config.jsの設定が難しい。  
 
-④SpringBoot上でReactを利用して画面構築する  
-
-React routerで画面切り替えをできるようにする。  
+③SpringBoot上でReactを利用して画面構築する。  
+メインはindex.htmlの共通フレームとして利用、React routerで画面切り替えをできるようにする。  
 併せて画面デザインにCSSフレームワークを適用し、デザインを整える。(TailwindCSSか、BootStrap5を使用予定)  
 
-⑤ControllerでAPIアクセスが可能か確認  
-Controller(RestController)でAPIアクセスが可能か確認する。  
+④入力チェックの方法を検討  
+サーバー側： SpringBoot標準の何か？　クライアント側： model_and_viewの入力検証を渡して独自実装。  
+クライアント側の実装はできるが、model_and_viewの入力検証をどのように渡すか調査
 
-⑥画面からの操作を確認  
-画面からサーバー側の処理ができることを確認する。  
-Springの例外処理にはAOPの機能を使えると思われるので利用する。  
+⑤SpringSecurityのログイン認証の動作確認  
+SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画  
+React routerでHomeからPersonへ画面遷移させる。  
 
-⑦入力チェックの方法を検討  
-サーバー側はSpringBoot標準の何かで実施。  
-クライアント側の入力検証をどうするか検討する。model_and_viewの検証値を渡すかも。  
-
-⑧SpringSecurityのログイン認証の動作確認  
-SpringSecurityを利用して、ログイン後に、メインメニューへアクセスできる用に修正する。  
-
-⑨セキュリティの動作確認  
+⑥セキュリティの動作確認  
 各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
 
-⑩実装の再確認  
-④～⑨の実装の再確認。修正をする。  
-
-⑪ユーザー登録処理を実装する。  
+⑦ユーザー登録処理を実装する。  
 ユーザー登録、本人確認、パスワードリマインダー、個人設定の編集、  
 管理者権限以上での権限変更の機能を実装する。  
 
-⑫2段階認証の実装  
+⑧2段階認証の実装  
 2段階認証を実装する。  
 
 
@@ -98,15 +94,8 @@ GitHub Desktopは個人用の設定が必要になります。
 | Gradle 7.6 | SpringBootで使用しているビルドツールです。初回マルチプロジェクトの構築で使用してます。 |
 | Node.js 18.13.0 | javascriptライブラリの管理とWebpackを利用するものです。 |
 
-※以下は不具合があったため利用停止(検討中)、バージョン管理は一旦、GitHub Desktopで操作しています。  
-
-| 項目 | 説明 |
-| :--- | :--- |
-| git 2.39.1| Git本体, Gitのローカルリポジトリ |
-| TortoiseGit 2.13 | Gitクライアント, Eclipseの右クリックメニューから使用できるようにします。 |
-| TortoiseGit Language Packs(Japan) | TortoiseGitの日本語化。 |
-
 ※Gradleはインストーラーでないので、自分で配置して環境変数を設定する必要があります。  
+※TortoiseGitの利用を検討していましたが一旦保留にしてます。現在、GitHubの更新にはGitHub Desktopで操作しています。  
 
 ## Eclipseプラグインとして追加するもの
 Eclipseのプラグインは下記を追加して下さい。バージョンは現時点の最新版を記載しています。  
@@ -126,7 +115,6 @@ Eclipseのプラグインは下記を追加して下さい。バージョンは�
 | SpotBugs Plug-in 3.1.5 | Javaのソースコードを静的解析し、バグを発見するプラグイン。 |
 | Spring Tools 4 4.17 | Springフレームワークによるアプリケーション開発をサポートするプラグイン。 |
 | Thymeleaf Plugin for Eclipse 3.01 | Springフレームワークによるアプリケーション開発をサポートするプラグイン。 |
-| Wide Web Developer HTML, CSS, JSON, Yaml, Javascript, TypeScript, Node tools | ※WDTに含まれるプラグイン。 |
 
 上記に付帯しているプラグインです。  
 
@@ -139,7 +127,7 @@ Eclipseのプラグインは下記を追加して下さい。バージョンは�
 | Mylyn WikiText 3.0 | ※WDTに含まれるプラグイン？ |
 | Node.js　embedder from Wild Web Developer | ※WDTに含まれるプラグイン。 |
 | TM Terminal | ※WDTに含まれるプラグイン。 |
-
+| Wide Web Developer HTML, CSS, JSON, Yaml, Javascript, TypeScript, Node tools | ※WDTに含まれるプラグイン。 |
 
 ※lombok.jarはEclipse Marketplaceのプラグインではないが、Eclipseインストール時に含まれる。  
 なければ追加してください。  
@@ -215,16 +203,18 @@ user_interfaceプロジェクトをクリックして、デバッグ → Spring 
 
 
 ## Gradle build
-EclipseのTerminalでgradle buildを実行し、ビルドが通るか確認しながら進めて下さい。
+EclipseのTerminalでgradle buildを実行し、ビルドが通るか確認しながら進めて下さい。  
 
 
 ## 注意事項
 ・画面がおかしいときはEclipseを再起動しないと反映しない場合がある。  
 
-・プロジェクトエクスプローラーや、フォルダの直接操作で、フォルダ名を変更すると不具合が出るためしないで下さい。  
-フォルダは常に新規作成、または削除で対応して下さい。
+・プロジェクトエクスプローラーでは、フォルダは常に新規作成、または削除で対応する必要があります。  
+フォルダ名を変更すると不具合が出るため、フォルダ名変更の操作はしないで下さい。  
 
 
 ## SpringBootプロジェクトでのNode.jsのnpm利用方法。
 調査中。  
 
+## webpack.config.jsについて
+ソースにあるものは下書きです。調査中。  

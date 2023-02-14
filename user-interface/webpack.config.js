@@ -1,3 +1,5 @@
+// webpack.config.jsは下書きです。
+
 // https://zenn.dev/hrkmtsmt/articles/93653309e2a13d
 
 const path = require('path');
