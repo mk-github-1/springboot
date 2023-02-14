@@ -13,43 +13,47 @@ import com.example.domainservice.repository.master.*;
 @Service
 public class PersonServiceImplements implements PersonService {
 
-	private final PersonRepository _personRepository;
+	// private final PersonRepository _personRepository;
 
-	public PersonServiceImplements(PersonRepository personRepository) {
-		this._personRepository = personRepository;
+	public PersonServiceImplements(/* PersonRepository personRepository */) {
+		// this._personRepository = personRepository;
 	}
 
 	public List<Person> findAll() {
 		// TODO Auto-generated method stub
-		return this._personRepository.findAll();
+		// return this._personRepository.findAll();
+		
+		return new ArrayList<Person>();
 	}
 
 	public Person findById(Long id) {
 		// TODO Auto-generated method stub
-		return this._personRepository.findById(id);
+		// return this._personRepository.findById(id);
+
+		return new Person();
 	}
 
 	public void create(Person person) {
 		// TODO Auto-generated method stub
-		this._personRepository.create(person);
-		this._personRepository.save();
+		// this._personRepository.create(person);
+		// this._personRepository.save();
 	}
 
 	public void edit(Person person) {
 		// TODO Auto-generated method stub
-		this._personRepository.update(person);
-		this._personRepository.save();
+		// this._personRepository.update(person);
+		// this._personRepository.save();
 	}
 
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
-		this._personRepository.delete(id);
-		this._personRepository.save();
+		// this._personRepository.delete(id);
+		// this._personRepository.save();
 	}
 
 	public void sort(Dictionary<Long, Long> ids) {
 		// TODO Auto-generated method stub
-		this._personRepository.sort(ids);
-		this._personRepository.save();
+		// this._personRepository.sort(ids);
+		// this._personRepository.save();
 	}
 }
