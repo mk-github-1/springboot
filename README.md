@@ -196,7 +196,6 @@ TortoiseGitを使うこともできるようですが、挙動がおかしかっ
 ## 正しく準備できた場合のEclipse
 
 user_interfaceプロジェクトをクリックして、デバッグ → Spring Boot Appを実行します。  
-<img src="https://user-images.githubusercontent.com/32920703/218778236-6d51ba1d-9446-49d4-a955-53398014b989.png" width="50%">
 
 「http://localhost:8080」 を開くとログイン画面が表示されます。  
 
