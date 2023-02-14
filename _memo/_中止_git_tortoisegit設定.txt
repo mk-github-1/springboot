@@ -1,0 +1,46 @@
+(中止)git・tortoiseGitは不具合があったので無しにしてます。
+
+// Git設定確認
+git config --list
+git config --global --list
+
+// user.name, user.emailの設定
+git config --global user.name "user"
+git config --global user.email abc@example.com
+
+// 改行コードを Git が自動変換することを無効にする
+// git configでlocalは設定できないのでインストーラーで実行して下さい。
+// Configuration the line end conversions　は　"Checkout as-is, commit as-is" を選択する。
+
+// 日本語の文字化け対策
+git config -–global core.quotepath false
+
+// push コマンド時にブランチ名やタグ名を指定しない場合の標準動作を設定する。(間違い防止)
+git config -–global push.default upstream
+
+// TortoiseGit設定で
+
+①TortoiseGit設定で公開鍵・秘密鍵を作成する
+TortoiseGit設定　-> 全般　-> 初期設定ウィザードを再実施　-> OpenSSH用で作成する。
+
+公開鍵はPublic keyをファイルで保存したものは使用できないので注意。Windowに表示されているものをコピーして保存して下さい。
+秘密鍵はprivate_key.ppkは保存してください。
+
+②GitHubに公開鍵を設定する
+GitHub　-> Profile icon -> Setting　-> SSH and GPG keys -> SSH keys -> New SSH keys
+
+③Pageant(PuTTY authentication agent)の設定　※PageantはTortoiseGitをインストールした時に入っていると思われます。
+Pageantを実行し、private_key.ppkにある秘密鍵を設定する。
+
+④TortoiseGit設定でSSHの
+TortoiseGit設定　-> Git -> リモート で保存
+
+リモート: GitHubのURL
+URL: GitHubのSSHのURL
+プッシュURL:※URLと同じでよいと思われる
+Putty鍵: private_key.ppkのパスを入力
+
+GitHub Desktopで保存していたoriginは削除する必要があります。
+この時点でGitHub Desktopは使用できなくなるので使用しないように注意下さい。
+
+⑤TortoiseGitでコミット&プッシュができるようになります。

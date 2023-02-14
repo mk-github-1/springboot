@@ -1,0 +1,42 @@
+Gradleの使い方
+
+◆build.gradleの設定
+(プラグインに次の2つを設定する)
+	id 'java'
+	id 'eclipse'
+
+(サブプロジェクトにjarを作成する。ProjectNameはサブプロジェクトのものに修正する)
+	jar {
+    	manifest {
+        	attributes 'Main-Class': "com.example.projectName.ProjectNameApplication"
+    	}
+	}
+
+◆Eclipseの管理ファイルの作成
+EclipseのTerminalで次のコマンドを実行
+
+(Eclipseの管理ファイルの作成)
+	gradle eclipse
+
+--------------------------------------------------
+
+(Eclipseの.classpath修正)
+	// gradle cleanEclipse eclipse ※これはクラスパスが消えてしまうので注意
+
+(Gradleビルド)
+	gradle build
+
+--------------------------------------------------
+
+(デバッグログを出力する) ※ログが多いので注意
+
+
+(スタックとレースを表示する)
+
+
+(依存関係をリフレッシュする)
+--------------------------------------------------
+
+◆.classpathに問題が起きた時
+たまに絶対パスが入ってしまう(原因調査)
+プロジェクトを閉じてから、.classpathを削除して、プロジェクト参照を削除してから再importすると直る。
