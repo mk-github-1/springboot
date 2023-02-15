@@ -1,7 +1,7 @@
 ## SpringBoot3 × React(gradleマルチプロジェクト)の自習用リポジトリ
 
 SpringBoot3 × React (gradleマルチプロジェクト)で、  
-SPA + Web APIでのCRUDなWebアプリケーションを作成するための自習用リポジトリです。  
+SPA + API受付でのCRUDなWebアプリケーションを作成するための自習用リポジトリです。  
 
 クライアント側はReactのシングルページアプリケーション(javascript管理下)で動き、  
 アプリケーションはログイン認証機能を持ち、サーバー側はAPIとして受付し、  
