@@ -74,7 +74,7 @@ Person画面をReactを利用して画面構築する。(この時点ではMPA)
 画面からの動作確認と、各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
 
 ⑦SpringBoot上でReactを利用してSPA対応    
-Reactを利用してSPA対応する。   
+Springログイン関係を除いて、Reactを利用してSPA対応する。   
 メインのindex.htmlの共通テンプレートとして作成が必要。  
 画面はReactのjavascriptファイル(JSX)となる。  
 React routerで画面切り替えをできるようにする。  
