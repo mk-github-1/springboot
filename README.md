@@ -202,8 +202,8 @@ spring.datasource.password=xxxx
 ## GitHubの利用
 一番簡単な方法として、GitHubへの接続にはGitHub Desktopを使用することが可能です。  
 
-TortoiseGitを使うこともできるようですが、挙動がおかしかったため利用を一旦中止します。  
-リモートリポジトリからデータを取得する時にgradleプロジェクトが認識されませんでした。  
+TortoiseGitを使うこともできるようですが、挙動がおかしかったため利用を一旦中止します。   
+いまはもしかしたらできるかも。  
 メモとして「git_tortoisegit設定.txt」に記載します。  
 
 ## Gradle buildをする
