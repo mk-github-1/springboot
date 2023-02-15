@@ -101,8 +101,8 @@ GitHub Desktopは個人用の設定が必要になります。
 
 | 項目 | 説明 |
 | :--- | :--- |
-| Eclipse Adoptium Open JDK 17 | Java開発環境, SpringBootで推奨と思われる。 |
-| Apache Tomcat 10 | Http server, Eclipseのデバッグでも使用します。 |
+| Eclipse Adoptium Open JDK 17 | Java開発環境, SpringBootで推奨 |
+| Apache Tomcat 10 | Http server, Eclipseのデバッグで使用 |
 | PostgreSQL 15 | 今回選択したデータベースです。 |
 | Eclipse IDE for Enterprise Java and Web Developers 2022 | 開発ツール |
 | GitHub Desktop | GitHubに簡単に接続するもの, 今回は初回コミットまたは初回取得をする場合に使用 |
