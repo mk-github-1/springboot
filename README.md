@@ -144,8 +144,7 @@ Eclipseのプラグインは下記を追加して下さい。バージョンは�
 | TM Terminal | ※WDTに含まれるプラグイン。 |
 | Wide Web Developer HTML, CSS, JSON, Yaml, Javascript, TypeScript, Node tools | ※WDTに含まれるプラグイン。 |
 
-※lombok.jarはEclipse Marketplaceのプラグインではないが、Eclipseインストール時に含まれる。  
-なければ追加してください。  
+※lombok.jarはEclipse Marketplaceのプラグインではないが、Eclipseインストール時に含まれる。なければ追加してください。  
 ※EGitはGradleと相性が悪いのでアンインストールします。  
 ※何か作業した時に余計なプラグインが追加されることがあります。不要なものは削除して下さい。  
 
@@ -184,7 +183,7 @@ postgresql_schema.sqlのSQLを利用してテーブル追加
 
 postgresql_data.sqlのSQLを利用してデータ追加  
 
-## user_interfaceプロジェクトのDB接続準備
+## user-interfaceプロジェクトのDB接続準備
 このSpringBootを実行するためにはDB接続設定が必要なため、   
 user_interfaceプロジェクトのapplication.propertiesを編集します。  
 ローカルPCのPostgreSQLに合わせた設定をして下さい。  
