@@ -172,7 +172,7 @@ postgresql_schema.sqlのSQLを利用してテーブル追加
 postgresql_data.sqlのSQLを利用してデータ追加  
 
 ## user_interfaceプロジェクトのDB接続準備
-SpringBootを実行するためにDB接続設定が必要なため、   
+このSpringBootを実行するためにはDB接続設定が必要なため、   
 user_interfaceプロジェクトのapplication.propertiesを編集します。  
 ローカルPCのPostgreSQLに合わせた設定をして下さい。  
 
@@ -193,23 +193,25 @@ TortoiseGitを使うこともできるようですが、挙動がおかしかっ
 リモートリポジトリからデータを取得する時にgradleプロジェクトが認識されませんでした。  
 メモとして「git_tortoisegit設定.txt」に記載します。  
 
-## 正しく準備できた場合のEclipse
+## Gradle buildをする。
+EclipseのTerminalで、cdでプロジェクトのルートフォルダに移動し、  
+gradle buildを実行します。  
+ビルドが通るか確認しながら進めて下さい。 
 
-user_interfaceプロジェクトをクリックして、デバッグ → Spring Boot Appを実行します。  
+## 正しく準備できた場合のEclipse
+Gradle build後、user_interfaceプロジェクトをクリックして、デバッグ → Spring Boot Appを実行します。  
 
 「http://localhost:8080」 を開くとログイン画面が表示されます。  
 
-※現在はデフォルトのログイン画面は表示されず、独自のログイン画面(デザイン未修正)と、  
-データベース問い合わせに変更しています。  
-
-
-## Gradle build
-EclipseのTerminalで、cdでプロジェクトのルートフォルダに移動し、  
-gradle buildを実行し、ビルドが通るか確認しながら進めて下さい。  
-
-
+※現在はデフォルトのサンプルのログイン画面は表示されず、独自のログイン画面(デザイン未修正)と、  
+PostgreSQLデータベース問い合わせに変更しています。  
+ 
 #### (注意事項)
-・画面がおかしい時はEclipseを再起動しないと反映しない場合がある。  
+・画面がおかしい時はEclipseを再起動しないと反映しない場合があります。  
+
+・Eclipseの動作がおかしいことがあります。例としてプラグインが使用できないなど。  
+コマンドプロンプトでeclipse.exeがあるディレクトリにcdし、  
+eclipse.exe -cleanで何回か実行すると直る場合があります。
 
 ・プロジェクトエクスプローラーでは、パッケージフォルダは常に新規作成、または削除で対応する必要があります。  
 フォルダ名を変更すると不具合が出るため、フォルダ名変更の操作はしないで下さい。  
