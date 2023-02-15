@@ -61,8 +61,8 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 ③画面デザインにCSSフレームワークを適用し、デザインを修正する。  
 (TailwindCSSか、BootStrap5を使用予定)  
 
-④SpringSecurityのログイン認証の動作修正  
-SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画。  
+④SpringSecurityのログイン修正  
+SpringSecurityを利用して、初回ページはログインページに、ログイン後にHomeControllerでHomeを描画。  
 HomeからPersonへ画面遷移できるようにする。  
 
 ⑤Person画面にReactを利用する  
