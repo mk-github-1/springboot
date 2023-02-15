@@ -11,7 +11,7 @@ DBの操作を行うことができるアプリケーションを構築します
 自習が終わった頃には実務でも使えそうな一通りの技術は、何となく使えるようになっているかも。  
 
 #### (扱う技術としては下記を考えています)
-Java(JDK17), SpringBoot3, PostgreSQL 15, Gradle, javascript(またはtypescript)  
+Java(JDK17), SpringBoot3, PostgreSQL 15, Gradle 7.6, javascript(またはtypescript)  
 Node.js(npm, Webpack用),  
 html, css, Bootstrap 5(またはTailwind CSS), React 18,
 
