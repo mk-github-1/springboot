@@ -19,8 +19,8 @@ html, css, Bootstrap 5(またはTailwind CSS), React 18,
 
 
 #### (使用ツール)
-Eclipse IDE for Enterprise Java and Web Developers(本家の英語版)  
-pgAdmin 4  
+・Eclipse IDE for Enterprise Java and Web Developers(本家の英語版)  
+・pgAdmin 4  
 
 ## (やりたいこと)
 
