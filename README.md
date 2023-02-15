@@ -199,8 +199,10 @@ spring.datasource.username=postgres
 spring.datasource.password=xxxx
 ```
 
-## GitHubの利用
-一番簡単な方法として、GitHubへの接続にはGitHub Desktopを使用することが可能です。  
+## GitHubからソースコードを取得
+GitHubからコードをダウンロードができます。   
+GitHubへの接続にはGitHub Desktopを使用することが可能です。  
+コラボレータ登録すればリモートリポジトリをクローンでも取得できるはず。  
 
 TortoiseGitを使うこともできるようですが、挙動がおかしかったため利用を一旦中止します。   
 いまはもしかしたらできるかも。  
