@@ -40,12 +40,14 @@ gradle buildが通るか確認しながら進める。
 ただし、現在gradle buildは成功しているが、DIするためのgradleの設定が何か足りなくできていない。
 
 ・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
+
 ・EntityクラスとModelクラスを分けるべきか検討中。  
+
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。  
 サーバー側のvalidationも追加する。
 
-・indexからPersonControllerにAPIアクセスする。  ※この時点ではPersonのhtmlをサーバーサイドレンダリングしてよい。  
 ・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
+
 ・サーバー側を非同期処理に対応する。(クライアント側はaxiosで対応予定。)
 
 ※SpringSecutiryが邪魔するかもしれないので一旦OFFにしておいてもOK。
@@ -63,14 +65,17 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画。  
 HomeからPersonへ画面遷移できるようにする。  
 
-⑤Person画面をReactを利用して画面構築する。(この時点ではMPA)  
+⑤Person画面にReactを利用する。
+Person画面をReactを利用して画面構築する。(この時点ではMPA)  
+画面からPersonControllerにAPIアクセスする。  
 
 ⑥画面からの動作確認  
 画面からの動作確認と、各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
 
 ⑦SpringBoot上でReactを利用してSPA対応する。   
 Reactを利用してSPA対応する。   
-メインのindex.htmlの共通テンプレートとして利用。画面はReactのjavascriptファイル(JSX？)となる。  
+メインのindex.htmlの共通テンプレートとして作成が必要。  
+画面はReactのjavascriptファイル(JSX)となる。  
 React routerで画面切り替えをできるようにする。  
 クライアント側の入力チェックの方法を検討(model_and_viewの設定値を渡したい)    
 
