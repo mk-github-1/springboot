@@ -29,8 +29,8 @@ html, css, Bootstrap 5(またはTailwind CSS), React 18,
 
 
 #### (進め方と課題)  
-前提として、EclipseのTerminalで、cdでプロジェクトのルートフォルダに移動し、  
-gradle buildが通るか確認しながら進める。  
+前提として、EclipseのTerminalでcdでプロジェクトのルートフォルダに移動し、  
+gradle buildが通るか確認しながら進めます。   
 ※このGitHubには.classpass等の個人PCによって影響があるものは除外してコードを載せています。
 
 ①直近で実現したいこと **************************************************  
