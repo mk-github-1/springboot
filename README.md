@@ -41,7 +41,8 @@ gradle buildが通るか確認しながら進めます。
 
 ・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
 
-・EntityクラスとModelクラスを分けるべきか検討中。  
+・EntityクラスとModelクラスを分けるべきか検討中。
+分ける場合はMappingが必要。  
 
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。  
 サーバー側のvalidationも追加する。
