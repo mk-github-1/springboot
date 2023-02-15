@@ -34,14 +34,19 @@ gradle buildが通るか確認しながら進める。
 ※このGitHubには.classpass等の個人PCによって影響があるものは除外してコードを載せています。
 
 ①直近で実現したいこと **************************************************  
-ここでは例としてPersonクラスを使用し、下記を優先で実施します。  
+ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
 ・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
+ただし、現在gradle buildは成功しているが、DIするためのgradleの設定が何か足りなくできていない。
+
 ・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
 ・EntityクラスとModelクラスを分けるべきか検討中。  
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。  
+サーバー側のvalidationも追加する。
+
 ・indexからPersonControllerにAPIアクセスする。  ※この時点ではPersonのhtmlをサーバーサイドレンダリングしてよい。  
 ・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
+・サーバー側を非同期処理に対応する。(クライアント側はaxiosで対応予定。)
 
 ※SpringSecutiryが邪魔するかもしれないので一旦OFFにしておいてもOK。
 
@@ -51,26 +56,29 @@ gradle buildが通るか確認しながら進める。
 webpack.config.jsの設定をして、javascriptをモジュールとして使用できるようにする。  
 ただし、webpack.config.jsの設定が難しい。  
 
-③SpringBoot上でReactを利用して画面構築する。  
-メインはindex.htmlの共通フレームとして利用。画面はReactのjavascriptファイル(JSX？)となる。React routerで画面切り替えをできるようにする。  
-併せて画面デザインにCSSフレームワークを適用し、デザインを整える。(TailwindCSSか、BootStrap5を使用予定)  
+③画面デザインにCSSフレームワークを適用し、デザインを修正する。  
+(TailwindCSSか、BootStrap5を使用予定)  
 
-④入力チェックの方法を検討  
-サーバー側： SpringBoot標準の何か？　クライアント側： model_and_viewの入力検証を渡して独自実装。  
-クライアント側の実装はできるが、model_and_viewの入力検証をどのように渡すか調査。  
-
-⑤SpringSecurityのログイン認証の動作確認  
+④SpringSecurityのログイン認証の動作確認  
 SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画。  
-React routerでHomeからPersonへ画面遷移させる。  
+HomeからPersonへ画面遷移できるようにする。  
 
-⑥セキュリティの動作確認  
-各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
+⑤Person画面をReactを利用して画面構築する。(この時点ではMPA)  
 
-⑦ユーザー登録処理を実装する。  
+⑥画面からの動作確認  
+画面からの動作確認と、各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
+
+⑦SpringBoot上でReactを利用してSPA対応する。   
+Reactを利用してSPA対応する。   
+メインのindex.htmlの共通テンプレートとして利用。画面はReactのjavascriptファイル(JSX？)となる。  
+React routerで画面切り替えをできるようにする。  
+クライアント側の入力チェックの方法を検討(model_and_viewの設定値を渡したい)    
+
+⑧ユーザー登録処理を実装する。  
 ユーザー登録、本人確認、パスワードリマインダー、個人設定の編集、  
 管理者権限以上での権限変更の機能を実装する。  
 
-⑧2段階認証の実装  
+⑨2段階認証の実装  
 2段階認証を実装する。  
 
 
