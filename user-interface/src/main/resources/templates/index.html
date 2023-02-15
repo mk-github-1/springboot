@@ -14,47 +14,6 @@
         <li sec:authorize-url="/general"><a href="general.html" th:href="@{/general}">一般ユーザーページへ</a></li>
         <li sec:authorize-url="/admin"><a href="admin.html" th:href="@{/admin}">管理者ページへ</a></li>
     </ul>
-		<p>
-①直近で実現したいこと **************************************************<br />
-ここでは例としてPersonクラスを使用し、下記を優先で実施します。<br />
-<br />
-・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。<br />
-・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。<br />
-・EntityクラスとModelクラスを分けるべきか検討中。<br />
-・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。<br />
-・indexからPersonControllerにAPIアクセスする。  ※この時点ではPersonのhtmlをサーバーサイドレンダリングしてよい。<br />
-・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。<br />
-<br />
-※SpringSecutiryが邪魔するかもしれないので一旦OFFにしておいてもOK。<br />
-<br />
-　**************************************************<br />
-<br />
-②Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする。<br />
-webpack.config.jsの設定をして、javascriptをモジュールとして使用できるようにする。<br />
-ただし、webpack.config.jsの設定が難しい。<br />
-<br />
-③SpringBoot上でReactを利用して画面構築する。<br />
-メインはindex.htmlの共通フレームとして利用。画面はReactのjavascriptファイル(JSX？)となる。React routerで画面切り替えをできるようにする。 <br />
-併せて画面デザインにCSSフレームワークを適用し、デザインを整える。(TailwindCSSか、BootStrap5を使用予定)<br />
-<br />
-④入力チェックの方法を検討<br />
-サーバー側： SpringBoot標準の何か？　クライアント側： model_and_viewの入力検証を渡して独自実装。<br />
-クライアント側の実装はできるが、model_and_viewの入力検証をどのように渡すか調査。<br />
-<br />
-⑤SpringSecurityのログイン認証の動作確認<br />
-SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画、<br />
-React routerでHomeからPersonへ画面遷移させる。<br />
-<br />
-⑥セキュリティの動作確認<br />
-各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。<br />
-<br />
-⑦ユーザー登録処理を実装する。<br />
-ユーザー登録、本人確認、パスワードリマインダー、個人設定の編集、<br />
-管理者権限以上での権限変更の機能を実装する。<br />
-<br />
-⑧2段階認証の実装<br />
-2段階認証を実装する。<br />
-		</p>
     <form sec:authorize="authenticated" method="post" action="index.html" th:action="@{/logout}">
         <button type="submit">ログアウト</button>
     </form>
