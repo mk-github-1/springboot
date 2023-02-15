@@ -36,7 +36,7 @@ gradle buildが通るか確認しながら進める。
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、下記を優先で実施します。  
 
-・PersonController, PersonServiceでSpring DIを利用できるようにする。  
+・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
 ・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
 ・EntityクラスとModelクラスを分けるべきか検討中。  
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。  
@@ -47,20 +47,20 @@ gradle buildが通るか確認しながら進める。
 
 　**************************************************  
 
-②Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする  
+②Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする。  
 webpack.config.jsの設定をして、javascriptをモジュールとして使用できるようにする。  
 ただし、webpack.config.jsの設定が難しい。  
 
 ③SpringBoot上でReactを利用して画面構築する。  
-メインはindex.htmlの共通フレームとして利用、React routerで画面切り替えをできるようにする。  
+メインはindex.htmlの共通フレームとして利用。画面はReactのjavascriptファイル(JSX？)となる。React routerで画面切り替えをできるようにする。  
 併せて画面デザインにCSSフレームワークを適用し、デザインを整える。(TailwindCSSか、BootStrap5を使用予定)  
 
 ④入力チェックの方法を検討  
 サーバー側： SpringBoot標準の何か？　クライアント側： model_and_viewの入力検証を渡して独自実装。  
-クライアント側の実装はできるが、model_and_viewの入力検証をどのように渡すか調査
+クライアント側の実装はできるが、model_and_viewの入力検証をどのように渡すか調査。  
 
 ⑤SpringSecurityのログイン認証の動作確認  
-SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画  
+SpringSecurityを利用して、ログイン後に、HomeControllerでindex.htmlを描画。  
 React routerでHomeからPersonへ画面遷移させる。  
 
 ⑥セキュリティの動作確認  
