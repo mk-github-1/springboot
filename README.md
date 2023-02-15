@@ -103,10 +103,10 @@ GitHub Desktopは個人用の設定が必要になります。
 | :--- | :--- |
 | Eclipse Adoptium Open JDK 17 | Java開発環境, SpringBootで推奨 |
 | Apache Tomcat 10 | Http server, Eclipseのデバッグで使用 |
-| PostgreSQL 15 | 今回選択したデータベースです。 |
+| PostgreSQL 15 | 今回選択したデータベース |
 | Eclipse IDE for Enterprise Java and Web Developers 2022 | 開発ツール |
-| GitHub Desktop | GitHubに簡単に接続するもの, 今回は初回コミットまたは初回取得をする場合に使用 |
-| Gradle 7.6 | SpringBootで使用しているビルドツールです。初回マルチプロジェクトの構築で使用してます。 |
+| GitHub Desktop | GitHubに簡単に接続するもの |
+| Gradle 7.6 | SpringBootの初回マルチプロジェクトの構築で使用。実際はEclipseプGradleプラグインのほうを使用してます。 |
 | Node.js 18.13.0 | javascriptライブラリの管理とWebpackを利用するものです。 |
 
 ※Gradleはインストーラーでないので、自分で配置して環境変数を設定する必要があります。  
