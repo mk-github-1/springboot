@@ -63,8 +63,11 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 (TailwindCSS、またはBootStrap5を使用予定)  
 
 ④SpringSecurityのログイン修正  
-SpringSecurityを利用して、初回ページはログインページに、ログイン後にHomeControllerでHomeに画面遷移。 
-HomeからPersonへ画面遷移できるようにする。  
+SpringSecurityを利用して  
+初回ページはログインページを表示する。  
+→ログイン後にHomeControllerでHomeに画面遷移する。  
+→ HomeからPersonへ画面遷移する。  
+をできるようにする。  
 
 ⑤Person画面にReactを利用する  
 Person画面をReactを利用して画面構築する。(この時点ではMPA)  
