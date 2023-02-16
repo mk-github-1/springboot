@@ -60,7 +60,7 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 ただし、webpack.config.jsの設定が難しい。  
 
 ③画面デザインにCSSフレームワークを適用し、デザインを修正する。  
-(TailwindCSSか、BootStrap5を使用予定)  
+(TailwindCSS、またはBootStrap5を使用予定)  
 
 ④SpringSecurityのログイン修正  
 SpringSecurityを利用して、初回ページはログインページに、ログイン後にHomeControllerでHomeに画面遷移。 
