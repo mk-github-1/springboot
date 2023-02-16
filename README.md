@@ -13,7 +13,7 @@ DBの操作を行うことができるアプリケーションを構築します
 #### (扱う技術としては下記を考えています)
 Java(JDK17), SpringBoot3, PostgreSQL 15, Gradle 7.6, javascript(またはtypescript)  
 Node.js(npm, Webpack用),  
-html, css, Bootstrap 5(またはTailwind CSS), React 18,
+html, css, Tailwind CSSまたはBootstrap5, React 18,
 
 他言語Webフレームワーク、Vue.jsを経験してますが、Java, SpringBoot, Reactはほぼ素人です。  
 
