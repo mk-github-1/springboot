@@ -201,7 +201,7 @@ spring.datasource.password=xxxx
 
 ## GitHubからソースコードを取得
 GitHubからコードをダウンロードができます。   
-GitHubへの接続にはGitHub Desktopを使用することが可能です。  
+または、GitHubへの接続にGitHub Desktopを使用することも可能です。  
 コラボレータ登録すればリモートリポジトリをクローンでも取得できるはず。  
 
 TortoiseGitを使うこともできるようですが、挙動がおかしかったため利用を一旦中止します。   
