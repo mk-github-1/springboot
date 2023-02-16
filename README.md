@@ -66,7 +66,7 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 SpringSecurityを利用して  
 初回ページはログインページを表示する。  
 →ログイン後にHomeControllerでHomeに画面遷移する。  
-→ HomeからPersonへ画面遷移する。  
+→ HomeからPersonControllerでPersonへ画面遷移する。  
 をできるようにする。  
 
 ⑤Person画面にReactを利用する  
