@@ -123,7 +123,7 @@ Eclipseのプラグインは下記を追加して下さい。バージョンは�
 | Autodetect Encoding 1.8.5 | ステータスバーに現在開いているファイルのエンコーディング/改行コードを表示するプラグイン。 |
 | Buildship Gradle Integration 3.0 | ビルドシステムであるGradleを利用するにあたって必要なライブラリ類をまとめたプラグイン。 |
 | Checkstyle Plug-in 10.4.0 | ソースコードが正しいかどうかを静的解析するプラグイン。 |
-| ContextQuickie2 0.6.3 | プロジェクトエクスプローラーでWindowsコンテキスト(右クリックメニュー)を開くプラグイン。TortoiseGitでバージョン管理するために利用します。 |
+| ContextQuickie2 0.6.3 | プロジェクトエクスプローラーでWindowsコンテキスト(右クリックメニュー)を開くプラグイン。TortoiseGitで利用するかもしれない。 |
 | EclEmma Java Code Coverage 3.1.6 | コードのテスト網羅率（カバレッジ）を計測するプラグイン。JUnit関連で使用。 |
 | Eclipse Enterprise Java and Wed Developer Tools 3.28 | Javaコードのコンパイルや実行、入力補完など、Java開発に欠かせない機能を提供するプラグイン。 |
 | Eclipse Zip Editor 1.1.8 | zipファイル内を操作するためのプラグイン。 |
