@@ -75,7 +75,7 @@ Person画面をReactを利用して画面構築する。(この時点ではMPA)
 
 ⑦SpringBoot上でReactを利用してSPA対応    
 Springログイン関係を除いて、Reactを利用してSPA対応する。   
-メインのindex.htmlの共通テンプレートとして作成が必要。  
+メインのindex.htmlは共通テンプレートとして作成が必要。  
 画面はReactのjavascriptファイル(JSX)となる。  
 React routerで画面切り替えをできるようにする。  
 クライアント側の入力チェックの方法を検討(model_and_viewの設定値を渡したい)    
