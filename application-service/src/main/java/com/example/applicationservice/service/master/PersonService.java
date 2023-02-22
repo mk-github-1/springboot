@@ -4,7 +4,6 @@ import java.util.*;
 
 import com.example.domainmodel.model.master.*;
 
-// @Transactional
 public interface PersonService {
 	public List<Person> findAll();
 

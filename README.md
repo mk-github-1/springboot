@@ -36,10 +36,14 @@ gradle buildが通るか確認しながら進めます。
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
-・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
+・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
 ただし、現在gradle buildは成功しているが、DIするためのgradleの設定が何か足りなくできていない。
+→EclipseのGradle設定にJava HOMEの指定が必要っぽい
 
-・ORMはHibernateなど何かを利用するが、デフォルトのRepositoryは使用せず、Entityを直接操作する独自のRepositoryを作成する。  
+・サブプロジェクトの[boot][springboot main]を削除する。
+
+・ORMはHibernateを利用する、Entityを直接操作する独自のRepositoryを作成する。  
+hibernate.jarの設定が必要。
 
 ・EntityクラスとModelクラスを分けるべきか検討中。
 分ける場合はMappingが必要。  
@@ -151,13 +155,15 @@ Eclipseのプラグインは下記を追加して下さい。バージョンは�
 ※何か作業した時に余計なプラグインが追加されることがあります。不要なものは削除して下さい。  
 
 ## Eclipse設定
-Adoptium Open JDKは初期状態で設定済みと思います。  
-EclipseのデバッグでWebアプリを動かすために、Apache Tomcatの設定が必要です。  
-EclipseでServersのタブを表示させて、そこにApache Tomcatのパスを設定します。  
-
 Projectについては、このリポジトリからダウンロード可能です。  
 
-→ 自前で準備しない場合(リンク先を準備中)  
+・Adoptium Open JDKは初期状態で設定済みと思います。  
+
+・EclipseのデバッグでWebアプリを動かすために、Apache Tomcatの設定が必要です。  
+EclipseでServersのタブを表示させて、そこにApache Tomcatのパスを設定します。  
+
+・EclipseのGradle設定にJava HOMEの設定が必要です。
+これを指定をしないとSpring DIが利用できなかったり、おかしな動作をする可能性があります。
 
 
 ## PostgreSQL設定  
