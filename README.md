@@ -36,9 +36,9 @@ gradle buildが通るか確認しながら進めます。
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
-・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-ただし、現在gradle buildは成功しているが、DIするためのgradleの設定が何か足りなくできていない。
-→EclipseのGradle設定にJava HOMEの指定が必要っぽい
+・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
+現在gradle buildは成功しているがDIができているかわからない。
+@Configurationを設定するクラスが必要かわかっていない。
 
 ・サブプロジェクトの[boot][springboot main]を削除する。
 
