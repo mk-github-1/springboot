@@ -14,6 +14,7 @@ public class PersonController {
 
 	private final PersonService _personService;
 
+	// @Autowiredは省略可能
 	public PersonController(PersonService personService) {
 		this._personService = personService;
 	}

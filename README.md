@@ -36,11 +36,15 @@ gradle buildが通るか確認しながら進めます。
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
-・Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-現在gradle buildは成功しているがDIができているかわからない。
-@Configurationを設定するクラスが必要かわかっていない。
+・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
+→Bean定義していなくてもDIできているっぽい
 
-・サブプロジェクトの[boot][springboot main]を削除する。
+・SpringSecurityで使用するPostgreSQLのログインユーザーの設定が間違っているので修正する。 
+ユーザー名はユーザーのEmailに修正する。  
+postgresql_data.sql、postgresql_schema.sqlの修正が必要。  
+修正後、ログインできることを確認する。
+
+・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
 
 ・ORMはHibernateを利用する、Entityを直接操作する独自のRepositoryを作成する。  
 hibernate.jarの設定が必要。
