@@ -39,18 +39,17 @@ gradle buildが通るか確認しながら進めます。
 ・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
 →Bean定義していなくてもDIできているっぽい
 
-・SpringSecurityで使用するPostgreSQLのログインユーザーの設定が間違っているので修正する。 
+・【作業中】SpringSecurityで使用するPostgreSQLのログインユーザーの設定が間違っているので修正する。 
 ユーザー名はユーザーのEmailに修正する。  
 postgresql_data.sql、postgresql_schema.sqlの修正が必要。  
-修正後、ログインできることを確認する。
+修正後、ログインできることを確認する。  
+
+・【作業中】ORMはHibernateを利用する、Entityを直接操作する独自のRepositoryを作成する。  
+EntityクラスとModelクラスを分けるべきか検討中。分ける場合はMappingが必要。  
+JpaTransactionManagerを使用できるようにする。
+→ bundle.gradleのimplementsにhibernateを追加
 
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
-
-・ORMはHibernateを利用する、Entityを直接操作する独自のRepositoryを作成する。  
-hibernate.jarの設定が必要。
-
-・EntityクラスとModelクラスを分けるべきか検討中。
-分ける場合はMappingが必要。  
 
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。(@AfterThrowingで実施)  
 サーバー側のvalidationも追加する。

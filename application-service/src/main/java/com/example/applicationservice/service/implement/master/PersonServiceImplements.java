@@ -3,6 +3,7 @@ package com.example.applicationservice.service.implement.master;
 import java.util.*;
 
 import org.springframework.stereotype.Service;
+// import org.springframework.orm.hibernate.HibernateTransactionManager;
 
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;
