@@ -15,6 +15,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @Configuration
 public class JpaConfiguration {
 
+	/*
 	@SuppressWarnings("unused")
 	@Autowired
 	private DataSource dataSource;
@@ -42,5 +43,6 @@ public class JpaConfiguration {
 		localContainerEntityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter());
 		return localContainerEntityManagerFactoryBean;
 	}
+	 */
 
 }
