@@ -36,4 +36,4 @@ INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, u
 INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, updated_at) VALUES(2, 'パーソン2', 21, NULL, NULL, 2, current_timestamp, current_timestamp);
 INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, updated_at) VALUES(3, 'パーソン3', 22, NULL, NULL, 3, current_timestamp, current_timestamp);
 
---------------------------------------------------000
+--------------------------------------------------
