@@ -15,8 +15,8 @@ CREATE TABLE public.login_user
     email character varying(256) PRIMARY KEY,
     name character varying(128) NOT NULL,
     password character varying(128) NOT NULL,
-    -- createdat timestamp NOT NULL,
-    -- updatedat timestamp NOT NULL,
+    created_at timestamp NOT NULL,
+    updated_at timestamp NOT NULL
 )
 
 TABLESPACE pg_default;
@@ -29,8 +29,8 @@ ALTER TABLE IF EXISTS public.login_user OWNER to postgres;
 CREATE TABLE public.role
 (
     name character varying(32) PRIMARY KEY,
-    -- createdat timestamp NOT NULL,
-    -- updatedat timestamp NOT NULL,
+    created_at timestamp NOT NULL,
+    updated_at timestamp NOT NULL
 )
 
 TABLESPACE pg_default;
@@ -42,10 +42,10 @@ ALTER TABLE IF EXISTS public.role OWNER to postgres;
 -- Table: public.user_role
 CREATE TABLE public.user_role
 (
-    user_id string,
-    role_id string,
-    -- createdat timestamp NOT NULL,
-    -- updatedat timestamp NOT NULL,
+    user_id character varying(256),
+    role_id character varying(32),
+    created_at timestamp NOT NULL,
+    updated_at timestamp NOT NULL,
     CONSTRAINT pk_user_role PRIMARY KEY (user_id, role_id),
 	CONSTRAINT fk_user_role_user_id FOREIGN KEY (user_id) REFERENCES public.login_user (email)
 		ON UPDATE NO ACTION ON DELETE NO ACTION,
@@ -62,14 +62,14 @@ ALTER TABLE IF EXISTS public.user_role OWNER to postgres;
 -- Table: public.person
 CREATE TABLE public.person
 (
-    id integer PRIMARY KEY,
-    name character varying(128) NOT NULL,
+    "id" integer PRIMARY KEY,
+    "name" character varying(128) NOT NULL,
     age integer,
-    -- remarks character varying(256),
-    -- oldid integer,
-    -- order integer NOT NULL,
-    -- createdat timestamp NOT NULL,
-    -- updatedat timestamp NOT NULL,
+    remarks character varying(256),
+    old_id integer,
+    "order" integer NOT NULL,
+    created_at timestamp NOT NULL,
+    updated_at timestamp NOT NULL
 )
 
 TABLESPACE pg_default;
