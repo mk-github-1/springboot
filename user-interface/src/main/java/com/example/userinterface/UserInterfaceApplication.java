@@ -15,8 +15,11 @@ public class UserInterfaceApplication {
 	public static void main(String[] args) {
 		// Application起動時に実行したいDIはここに記載
 		/*
-		ApplicationContext app = new AnnotationConfigApplicationContext(SpringDiConfig.class);
-		PersonService personService = app.getBean(PersonService.class);
+		1. ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+		2. ApplicationContext applicationContext = new AnnotationConfigApplicationContext(com.example.applicationservice);
+		3. ApplicationContext applicationContext = new ClassPassXmlApplicationContext("META-INF/spring/");
+		4. ApplicationContext applicationContext = new FileSystemXmlApplicationContext("./spring/applicationContext.xml");
+		PersonService personService = applicationContext.getBean(PersonService.class);
 		 */
 
 		SpringApplication.run(UserInterfaceApplication.class, args);
