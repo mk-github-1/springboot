@@ -9,17 +9,18 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.applicationservice.service.master.*;
 
+// @SpringBootApplicationにより、基本的にComponentは自動スキャンされる
 @SpringBootApplication
 public class UserInterfaceApplication {
 
 	public static void main(String[] args) {
-		// Application起動時に実行したいDIはここに記載
+		// Application起動時に実行したいDIはここに記載、デフォルトでsingletonになる
 		/*
 		1. ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 		2. ApplicationContext applicationContext = new AnnotationConfigApplicationContext(com.example.applicationservice);
 		3. ApplicationContext applicationContext = new ClassPassXmlApplicationContext("META-INF/spring/");
 		4. ApplicationContext applicationContext = new FileSystemXmlApplicationContext("./spring/applicationContext.xml");
-		PersonService personService = applicationContext.getBean(PersonService.class);
+		PersonService personService = applicationContext.getBean(”PersonService”, PersonService.class);
 		 */
 
 		SpringApplication.run(UserInterfaceApplication.class, args);
