@@ -41,6 +41,7 @@ gradle buildが通るか確認しながら進めます。
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
 PostgreSQLのテーブル修正  
+画面はデフォルト仕様のものをオリジナルで作る。  
 修正後、ログインできることを確認する。  
 
 ・【作業中】ORMはHibernateを利用する  
