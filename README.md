@@ -53,7 +53,7 @@ EntityクラスとModelクラスを分けたいが、Mappingが必要(Repository
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
 
 ・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。(@AfterThrowingで実施)  
-サーバー側のvalidationも追加する。
+サーバー側のvalidation(@RequestBody @Validatedを追加する。
 
 ・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
 
