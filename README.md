@@ -37,7 +37,7 @@ gradle buildが通るか確認しながら進めます。
 ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
 ・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-→Bean定義しなくてもDIできているっぽい(動作確認未)  
+→Bean定義しなくても、Configuration方法でDIできているっぽい(動作確認未)  
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
 PostgreSQLのテーブル修正。  
