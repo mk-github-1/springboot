@@ -14,4 +14,8 @@ public class Account {
 	public String password;
 
 	public List<String> roleList;
+	
+	public Boolean isAdmin() {
+		return true;
+	}
 }
