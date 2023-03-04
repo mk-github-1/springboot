@@ -38,8 +38,9 @@ public class AccountUserDetailsService implements UserDetailsService {
 	 * ここで生成した権限情報は認可処理で使用される
 	 */
 	private Collection<GrantedAuthority> getAuthorities(Account account) {
+		// Springではロールに”ROLE_”プレフィックスを設定する必要があります
 		if (account.isAdmin()) {
-			return AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");
+			return AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMINISTRATOR");
 		} else {
 			return AuthorityUtils.createAuthorityList("ROLE_USER");
 		}
