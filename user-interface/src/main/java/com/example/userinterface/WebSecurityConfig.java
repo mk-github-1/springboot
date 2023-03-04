@@ -21,6 +21,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity
 public class WebSecurityConfig {
 
+	/*
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.formLogin(login -> login
@@ -42,6 +43,7 @@ public class WebSecurityConfig {
 
         return http.build();
     }
+     */
 
     /*
     @Bean
