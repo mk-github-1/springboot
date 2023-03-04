@@ -7,7 +7,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 /**
- * LoginUserDetails: 認証処理で必要となる資格情報(ユーザー名とパスワード)とユーザーの状態を提供するための実装
+ * 認証処理で必要となる資格情報(ユーザー名とパスワード)とユーザーの状態を提供するためのUserDetailsの実装
+ * 
+ * 'Spring徹底入門を引用'
  */
 public class AccountUserDetails implements UserDetails {
 
@@ -15,6 +17,7 @@ public class AccountUserDetails implements UserDetails {
 	 * LoginUserDetailsの識別用
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	private final Account _account;
     private final Collection<GrantedAuthority> _authorities;
 
@@ -27,14 +30,7 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
-	 */
-    public Account getAccount() {
-        return this._account;
-    }
-
-    /**
-	 *
+	 *　ユーザー名を返却する
 	 */
     @Override
     public String getUsername() {
@@ -42,7 +38,8 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 *　登録されているパスワードを返却する
+	 *　一致しない場合、DaoAuthenticationProviderがBadCredentialsExceptionをスローする
 	 */
     @Override
     public String getPassword() {
@@ -50,7 +47,8 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 *　有効なユーザーか判定する
+	 *　無効なユーザーの場合、DaoAuthenticationProviderがDisabledExceptionをスローする
 	 */
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
@@ -58,7 +56,8 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 * アカウントのロック状態を判定する
+	 * アカウントがロックされいる場合、DaoAuthenticationProviderがLockedExceptionをスローする
 	 */
     @Override
     public boolean isAccountNonExpired() {
@@ -66,7 +65,8 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 * アカウントの有効期限の状態を判定する
+	 * 有効期限切れの場合、DaoAuthenticationProviderがAccountExpiredExceptionをスローする
 	 */
     @Override
     public boolean isAccountNonLocked() {
@@ -74,7 +74,8 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 * 資格情報の有効期限の状態を判定する
+	 * 有効期限切れの場合、DaoAuthenticationProviderがCredentialExpiredExceptionをスローする
 	 */
     @Override
     public boolean isCredentialsNonExpired() {
@@ -82,10 +83,18 @@ public class AccountUserDetails implements UserDetails {
     }
 
     /**
-	 *
+	 * ユーザーに与えられている権限リストを返却する
+	 * 認可処理で利用する
 	 */
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    /**
+	 * 認証処理成功後の処理でアカウント情報にアクセスできるようにするため、getを用意する
+	 */
+    public Account getAccount() {
+        return this._account;
     }
 }

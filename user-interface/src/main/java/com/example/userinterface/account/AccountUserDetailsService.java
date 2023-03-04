@@ -16,8 +16,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountUserDetailsService implements UserDetailsService {
+	// 【後でAccountRepositoryを作成、何かの方法でDIを使用】
 	// @Autowired
 	// AccountRepository accountRepository;
+
+    /**
+	 * constructor
+	 */
+	/*
+	public AccountUserDetailsService () {
+
+	}
+	 */
 
     /**
 	 * データベースからアカウント情報を検索する

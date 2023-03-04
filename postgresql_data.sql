@@ -24,7 +24,7 @@ INSERT INTO public.login_user(email, name, password, created_at, updated_at) VAL
 
 --------------------------------------------------
 
--- user_role （Springではロールに”ROLE_”プレフィックスを設定する必要があります。）--
+-- user_role （Springではロールに”ROLE_”プレフィックスを設定する必要があります）--
 INSERT INTO public.user_role(user_id, role_id, created_at, updated_at) VALUES('system_administrator@example.com', 'ROLE_SYSTEMADMINISTRATOR', current_timestamp, current_timestamp);
 INSERT INTO public.user_role(user_id, role_id, created_at, updated_at) VALUES('administrator@example.com', 'ROLE_ADMINISTRATOR', current_timestamp, current_timestamp);
 INSERT INTO public.user_role(user_id, role_id, created_at, updated_at) VALUES('user@example.com', 'ROLE_USER', current_timestamp, current_timestamp);
