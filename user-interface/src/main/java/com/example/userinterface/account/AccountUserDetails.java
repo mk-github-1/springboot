@@ -26,41 +26,64 @@ public class AccountUserDetails implements UserDetails {
         this._authorities = authorities;
     }
 
+    /**
+	 *
+	 */
     public Account getAccount() {
         return this._account;
     }
 
-    //
+    /**
+	 *
+	 */
     @Override
     public String getUsername() {
-        return this._account.email;
+        return this._account.getEmail();
     }
 
+    /**
+	 *
+	 */
     @Override
     public String getPassword() {
-        return this._account.password;
+        return this._account.getPassword();
     }
 
+    /**
+	 *
+	 */
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
         return this._authorities;
     }
 
+    /**
+	 *
+	 */
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    /**
+	 *
+	 */
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    /**
+	 *
+	 */
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    /**
+	 *
+	 */
     @Override
     public boolean isEnabled() {
         return true;

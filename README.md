@@ -170,6 +170,7 @@ EclipseでServersのタブを表示させて、そこにApache Tomcatのパス�
 
 ・Eclipseにlombokをインストールをします。
 .\eclipse\jee-2022-12\eclipse\pluginsフォルダにあるlombok.jarをダブルクリックしてインストーラーを実行して設定します。  
+Eclipseの各プロジェクト設定の、Javaのビルドパスに外部JARとしてlombok.jarを設定します。  
 
 ## PostgreSQL設定  
 
