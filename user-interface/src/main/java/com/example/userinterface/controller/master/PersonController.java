@@ -2,7 +2,7 @@ package com.example.userinterface.controller.master;
 
 import java.util.*;
 
-import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.web.bind.annotation.RestController;
 
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;

@@ -1,13 +1,13 @@
 package com.example.userinterface;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+// import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -25,12 +25,16 @@ import com.example.userinterface.account.AccountUserDetailsService;
 @EnableWebSecurity
 @EnableMethodSecurity
 public class WebSecurityConfig {
-	@Autowired
+
 	AccountUserDetailsService accountUserDetailsService;
 
-	/*
+	public WebSecurityConfig(AccountUserDetailsService accountUserDetailsService) {
+		this.accountUserDetailsService = accountUserDetailsService;
+	}
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    	/*
         http.formLogin(login -> login
                 .loginProcessingUrl("/login")
                 .loginPage("/login")
@@ -47,10 +51,10 @@ public class WebSecurityConfig {
                 .requestMatchers("/user").hasRole("USER")
                 .anyRequest().authenticated()
         );
+    	 */
 
         return http.build();
     }
-     */
 
     /**
 	 *　AuthenticationManagerのBean定義を行う
