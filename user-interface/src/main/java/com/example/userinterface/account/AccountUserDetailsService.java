@@ -2,6 +2,7 @@ package com.example.userinterface.account;
 
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,18 +17,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountUserDetailsService implements UserDetailsService {
-	// 【後でAccountRepositoryを作成、何かの方法でDIを使用】
+	// 【コンストラクタ注入か、Autowiredを使用するか検討中】
+	private final AccountRepository accountRepository;
+
 	// @Autowired
 	// AccountRepository accountRepository;
 
     /**
 	 * constructor
 	 */
-	/*
-	public AccountUserDetailsService () {
-
+	public AccountUserDetailsService (AccountRepository accountRepository) {
+		this.accountRepository = accountRepository;
 	}
-	 */
 
     /**
 	 * データベースからアカウント情報を検索する
