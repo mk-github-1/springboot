@@ -4,11 +4,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.example.domainmodel.model.account.Account;
+
 import java.util.Collection;
 
 /**
  * 認証処理で必要となる資格情報(ユーザー名とパスワード)とユーザーの状態を提供するためのUserDetailsの実装
- * 
+ *
  * 'Spring徹底入門'を引用
  */
 public class AccountUserDetails implements UserDetails {
@@ -17,7 +19,7 @@ public class AccountUserDetails implements UserDetails {
 	 * LoginUserDetailsの識別用
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private final Account _account;
     private final Collection<GrantedAuthority> _authorities;
 

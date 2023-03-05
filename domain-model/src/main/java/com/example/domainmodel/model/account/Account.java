@@ -1,4 +1,4 @@
-package com.example.userinterface.account;
+package com.example.domainmodel.model.account;
 
 import java.util.List;
 

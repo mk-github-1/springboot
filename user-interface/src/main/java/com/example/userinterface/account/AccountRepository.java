@@ -2,6 +2,8 @@ package com.example.userinterface.account;
 
 import org.springframework.stereotype.Repository;
 
+import com.example.domainmodel.model.account.Account;
+
 /**
  * Account情報にアクセスするRepository、インタフェースがない？
  *
