@@ -2,6 +2,7 @@ package com.example.userinterface.controller.master;
 
 import java.util.*;
 
+import org.springframework.stereotype.Controller;
 // import org.springframework.web.bind.annotation.RestController;
 
 import com.example.applicationservice.service.master.*;
@@ -9,7 +10,11 @@ import com.example.domainmodel.model.master.*;
 
 // コードはコンパイルを通すための下書きです。
 
+/**
+ * PersonController
+ */
 // @RestController
+@Controller
 public class PersonController {
 
 	private final PersonService _personService;

@@ -13,10 +13,18 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Iterator;
 
+/**
+ * LoggingFilter
+ *
+ * 
+ */
 public class LoggingFilter extends OncePerRequestFilter {
 
     private static Logger logger = LoggerFactory.getLogger(LoggingFilter.class);
-
+    
+    /**
+     * 
+     */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         ContentCachingRequestWrapper requestWrapper = new ContentCachingRequestWrapper(request);
@@ -28,7 +36,10 @@ public class LoggingFilter extends OncePerRequestFilter {
         dumpRequest(request);
         dumpSession(request);
     }
-
+    
+    /**
+     * 
+     */
     private void dumpRequest(HttpServletRequest request) {
         for (Iterator<String> iterator = request.getAttributeNames().asIterator(); iterator.hasNext(); ) {
             String key = iterator.next();
@@ -36,7 +47,10 @@ public class LoggingFilter extends OncePerRequestFilter {
             logger.info("Request key = {}, value = {}", key, value);
         }
     }
-
+    
+    /**
+     * 
+     */
     private void dumpSession(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         if (session == null) {

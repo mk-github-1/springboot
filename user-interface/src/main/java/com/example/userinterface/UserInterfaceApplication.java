@@ -7,11 +7,17 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 // import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-
-// @SpringBootApplicationにより、基本的にComponentは自動スキャンされる
+/**
+ * UserInterfaceApplication
+ *
+ *
+ */
 @SpringBootApplication
 public class UserInterfaceApplication {
 
+	/**
+	 * プログラムの起点
+	 */
 	public static void main(String[] args) {
 		// Application起動時に実行したいDIはここに記載、デフォルトでsingletonになる
 		/*
@@ -25,6 +31,9 @@ public class UserInterfaceApplication {
 		SpringApplication.run(UserInterfaceApplication.class, args);
 	}
 
+	/**
+	 * loggingFilter【これはここで良い？ApplicationConfigかも】
+	 */
     @Bean
     public FilterRegistrationBean<?> loggingFilter() {
         FilterRegistrationBean<LoggingFilter> registrationBean = new FilterRegistrationBean<>(new LoggingFilter());

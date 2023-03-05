@@ -1,4 +1,4 @@
-package com.example.userinterface;
+package com.example.userinterface.config;
 
 import javax.sql.DataSource;
 
@@ -10,25 +10,24 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 /**
- * JpaのConfiguration
+ * JpaのConfig
  *
  * 'Spring徹底入門'を引用
  */
-
 @Configuration
-public class JpaConfiguration {
+public class JpaConfig {
 
 	private final DataSource dataSource;
 
     /**
 	 * constructor
 	 */
-	public JpaConfiguration(DataSource dataSource) {
+	public JpaConfig(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
 
     /**
-	 * JpaVenderAdapterのBeanを定義
+	 * JpaVenderAdapterのBean定義を行う
 	 */
 	@Bean
 	public JpaVendorAdapter jpaVendorAdapter() {
@@ -45,7 +44,7 @@ public class JpaConfiguration {
 	}
 
     /**
-	 *　LocalContainerEntityManagerFactoryBeanのBeanを定義
+	 *　LocalContainerEntityManagerFactoryBeanのBean定義を行う
 	 */
 	@Bean
 	public LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean(DataSource dataSource) {

@@ -1,4 +1,4 @@
-package com.example.userinterface;
+package com.example.userinterface.config;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
@@ -17,10 +17,11 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import com.example.userinterface.account.AccountUserDetailsService;
 
-//　WebSecurityConfigの設定をすると初回起動時のログイン画面の挙動などを変更できます。
-
-// (参考)https://github.com/MasatoshiTada/spring-security-intro/blob/main/src/main/java/com/example/springsecurityintro/
-
+/**
+ * WebSecurityのConfig
+ *
+ * 'Spring徹底入門'を引用
+ */
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -28,10 +29,16 @@ public class WebSecurityConfig {
 
 	AccountUserDetailsService accountUserDetailsService;
 
+    /**
+	 * constructor
+	 */
 	public WebSecurityConfig(AccountUserDetailsService accountUserDetailsService) {
 		this.accountUserDetailsService = accountUserDetailsService;
 	}
 
+    /**
+	 * SecurityFilterChainのBean定義を行う
+	 */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     	/*

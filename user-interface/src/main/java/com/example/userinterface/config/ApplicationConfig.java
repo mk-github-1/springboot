@@ -1,10 +1,23 @@
-package com.example.userinterface;
+package com.example.userinterface.config;
 
 // import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * ApplicationのConfig
+ *
+ * 'Spring徹底入門'を引用
+ */
 @Configuration
-public class ApplicationConfiguration {
+public class ApplicationConfig {
+
+    /**
+	 * constructor
+	 */
+	public ApplicationConfig() {
+
+	}
+
 	// Java configuration方法
 	// 主にコンポーネントスキャンによる自動登録ができない（例. 外部ライブラリに含まれるクラスをBeanとして登録する）場合に使われる。
 	// ↓
