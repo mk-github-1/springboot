@@ -64,7 +64,7 @@ public class WebSecurityConfig {
     }
 
     /**
-	 *　AuthenticationManagerのBean定義を行う
+	 *　AuthenticationManagerのBean定義を行う ※Spring徹底入門の手順は古いので使用できない
 	 */
     @Bean
     public AuthenticationManager authenticationManager(){
