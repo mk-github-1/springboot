@@ -10,7 +10,16 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class AccountRepository {
 
+    /**
+	 * constructor
+	 */
+	public AccountRepository () {
 
+	}
+
+    /**
+	 * userNameからAccountを取得する
+	 */
 	public Account findOne(String username) {
 		return new Account();
 	}
