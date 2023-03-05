@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * 認証処理で必要となる資格情報(ユーザー名とパスワード)とユーザーの状態を提供するためのUserDetailsの実装
  * 
- * 'Spring徹底入門を引用'
+ * 'Spring徹底入門'を引用
  */
 public class AccountUserDetails implements UserDetails {
 

@@ -2,19 +2,26 @@ package com.example.userinterface.account;
 
 import java.util.List;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+/**
+ * Accountモデル
+ *　
+ * ※@Setterは使用しないで下さい
+ */
 @Getter
+@EqualsAndHashCode
 public class Account {
 
-	public String email;
+	private String email;
 
-	public String name;
+	private String name;
 
-	public String password;
+	private String password;
 
-	public List<String> roleList;
-	
+	private List<String> roleList;
+
 	public Boolean isAdmin() {
 		return true;
 	}

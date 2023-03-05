@@ -3,7 +3,12 @@ package com.example.domainmodel.model.master;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
-//@Setter
+/**
+ * Personモデル
+ *　
+ * ※@Setterは使用しないで下さい
+ */
+
 @Getter
 @EqualsAndHashCode
 public class Person {

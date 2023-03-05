@@ -1,6 +1,7 @@
 package com.example.userinterface.account;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,15 +14,11 @@ import org.springframework.stereotype.Service;
 /**
  * 資格情報とユーザーの状態をデータストアから取得するためのUserDetailsServiceの実装
  *
- * 'Spring徹底入門を引用'
+ * 'Spring徹底入門'を引用
  */
 @Service
 public class AccountUserDetailsService implements UserDetailsService {
-	// 【コンストラクタ注入か、Autowiredを使用するか検討中】
 	private final AccountRepository accountRepository;
-
-	// @Autowired
-	// AccountRepository accountRepository;
 
     /**
 	 * constructor
@@ -36,9 +33,8 @@ public class AccountUserDetailsService implements UserDetailsService {
 	 */
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Account account = null;
-        // Account account = Optinal.ofNullable(accountRepository.findeOne(username))
-        // 		.OrElseThrow(() -> new UsernamgeNotFoundException("user not found"));
+        Account account = Optional.ofNullable(accountRepository.findOne(username))
+        	.orElseThrow(() -> new UsernameNotFoundException("user not found"));
 
 		//　アカウント情報が見つかった場合はUserDetailsを生成する
         return new AccountUserDetails(account, getAuthorities(account));
