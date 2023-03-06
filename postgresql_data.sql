@@ -32,8 +32,8 @@ INSERT INTO public.user_role(user_id, role_id, created_at, updated_at) VALUES('u
 --------------------------------------------------
 
 -- person ※日本語が文字化けしないか確認のためパーソンとしてます --
-INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, updated_at) VALUES(1, 'パーソン1', 20, NULL, NULL, 1, current_timestamp, current_timestamp);
-INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, updated_at) VALUES(2, 'パーソン2', 21, NULL, NULL, 2, current_timestamp, current_timestamp);
-INSERT INTO public.person(id, name, age, remarks, old_id, "order", created_at, updated_at) VALUES(3, 'パーソン3', 22, NULL, NULL, 3, current_timestamp, current_timestamp);
+INSERT INTO public.person(id, name, email, age, remarks, old_id, "order", created_at, updated_at) VALUES(1, 'パーソン1', 'person1@example.com', 20, NULL, NULL, 1, current_timestamp, current_timestamp);
+INSERT INTO public.person(id, name, email, age, remarks, old_id, "order", created_at, updated_at) VALUES(2, 'パーソン2', 'person2@example.com', 21, NULL, NULL, 2, current_timestamp, current_timestamp);
+INSERT INTO public.person(id, name, email, age, remarks, old_id, "order", created_at, updated_at) VALUES(3, 'パーソン3', 'person3@example.com', 22, NULL, NULL, 3, current_timestamp, current_timestamp);
 
 --------------------------------------------------

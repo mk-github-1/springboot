@@ -19,34 +19,30 @@ public class PersonRepositoryImplements implements PersonRepository {
 	}
 
 	public List<Person> findAll() {
-		// TODO Auto-generated method stub
 		return new ArrayList<Person>();
 	}
 
 	public Person findById(Long id) {
-		// TODO Auto-generated method stub
 		return new Person();
 	}
 
 	public void create(Person person) {
-		// TODO Auto-generated method stub
+
 	}
 
 	public void update(Person person) {
-		// TODO Auto-generated method stub
+
 	}
 
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void sort(Dictionary<Long, Long> ids) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void save() {
-		// TODO Auto-generated method stub
+
 	}
 }

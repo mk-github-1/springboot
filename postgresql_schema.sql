@@ -13,8 +13,8 @@ DROP TABLE IF EXISTS public.person;
 CREATE TABLE public.login_user
 (
     email character varying(256) PRIMARY KEY,
-    name character varying(128) NOT NULL,
-    password character varying(128) NOT NULL,
+    name character varying(256) NOT NULL,
+    password character varying(256) NOT NULL,
     created_at timestamp NOT NULL,
     updated_at timestamp NOT NULL
 )
@@ -63,7 +63,8 @@ ALTER TABLE IF EXISTS public.user_role OWNER to postgres;
 CREATE TABLE public.person
 (
     "id" integer PRIMARY KEY,
-    "name" character varying(128) NOT NULL,
+    "name" character varying(256) NOT NULL,
+    email character varying(256),
     age integer,
     remarks character varying(256),
     old_id integer,
