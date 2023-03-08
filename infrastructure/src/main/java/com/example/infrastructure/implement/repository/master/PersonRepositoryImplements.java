@@ -16,6 +16,10 @@ import com.example.domainservice.repository.master.*;
 
 // コードはコンパイルを通すための下書きです。
 
+/**
+ * PersonRepositoryImplements
+ *
+ */
 @Async
 @Repository
 public class PersonRepositoryImplements implements PersonRepository {

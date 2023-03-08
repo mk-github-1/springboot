@@ -14,7 +14,6 @@ import lombok.Getter;
 
 /**
  * Accountモデル
- *　
  * ※@Setterは使用しないで下さい
  */
 @Entity

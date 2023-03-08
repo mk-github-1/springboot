@@ -4,6 +4,10 @@ import java.util.*;
 
 import com.example.domainmodel.model.master.*;
 
+/**
+ * PersonService
+ *　
+ */
 public interface PersonService {
 	public List<Person> findAll();
 

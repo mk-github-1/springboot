@@ -16,7 +16,6 @@ import java.util.Iterator;
 /**
  * LoggingFilter
  *
- * 
  */
 public class LoggingFilter extends OncePerRequestFilter {
 

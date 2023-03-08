@@ -2,6 +2,7 @@ package com.example.applicationservice.service.implement.master;
 
 import java.util.*;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -12,7 +13,12 @@ import com.example.domainservice.repository.master.*;
 
 // コードはコンパイルを通すための下書きです。
 
+/**
+ * PersonServiceImplements
+ *　
+ */
 @Transactional
+@Async
 @Service
 public class PersonServiceImplements implements PersonService {
 

@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * HomeController
  *
- *
  */
 // @RestController
 @Controller

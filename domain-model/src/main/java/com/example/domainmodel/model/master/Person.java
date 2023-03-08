@@ -14,7 +14,7 @@ import lombok.Getter;
 
 /**
  * Person
- *　
+ *　※@Setterは使用しないで下さい
  */
 @Entity
 @Table(name="person")
