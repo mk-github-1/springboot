@@ -3,12 +3,13 @@ package com.example.domainservice.repository.master;
 import java.util.*;
 
 import com.example.domainmodel.model.master.*;
+import com.example.domainservice.GenericeRepository;
 
 /**
  * PersonRepository
  *
  */
-public interface PersonRepository {
+public interface PersonRepository extends GenericeRepository<Person> {
 
 	public List<Person> findAll();
 
