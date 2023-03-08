@@ -40,14 +40,13 @@ gradle buildが通るか確認しながら進めます。
 →Bean定義しなくても、Configuration方法でDIできているっぽい(動作確認未)  
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
-PostgreSQLのテーブル修正。  
+PostgreSQLのテーブル修正。Postgres⇆H2で切替できてもいいかも。    
 画面はデフォルト仕様のものをオリジナルで作る。  
 ログイン関係のプログラム修正。  
 修正後、ログインできることを確認する。  
 
 ・【作業中】ORMはSpring Data JPAのEntityManagerを使用して、CRUDメソッドを構築する。  
-インタフェースの親のGenericRepositoryインタフェースを作る。  
-EntityクラスとModelクラスを分けたいが、Mappingが必要(RepositoryでMapper？)
+EntityクラスとModelクラスを分けたいが、Mappingが必要。
 
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
 
