@@ -3,7 +3,8 @@ package com.example.applicationservice.service.implement.master;
 import java.util.*;
 
 import org.springframework.stereotype.Service;
-//import org.springframework.orm.hibernate.HibernateTransactionManager;
+
+import jakarta.transaction.Transactional;
 
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;
@@ -11,7 +12,7 @@ import com.example.domainservice.repository.master.*;
 
 // コードはコンパイルを通すための下書きです。
 
-//@Transactional
+@Transactional
 @Service
 public class PersonServiceImplements implements PersonService {
 
@@ -31,21 +32,17 @@ public class PersonServiceImplements implements PersonService {
 
 	public void create(Person person) {
 		this._personRepository.create(person);
-		this._personRepository.save();
 	}
 
 	public void edit(Person person) {
 		this._personRepository.update(person);
-		this._personRepository.save();
 	}
 
 	public void delete(Long id) {
 		this._personRepository.delete(id);
-		this._personRepository.save();
 	}
 
 	public void sort(Dictionary<Long, Long> ids) {
 		this._personRepository.sort(ids);
-		this._personRepository.save();
 	}
 }

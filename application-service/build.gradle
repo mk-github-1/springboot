@@ -32,6 +32,7 @@ dependencies {
 	implementation project(':domain-model')
 	implementation project(':domain-service')
 
+	implementation 'jakarta.transaction:jakarta.transaction-api:2.0.1'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.integration:spring-integration-jpa'
