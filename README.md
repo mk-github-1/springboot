@@ -46,7 +46,7 @@ PostgreSQLのテーブル修正。Postgres⇆H2で切替できてもいいかも
 修正後、ログインできることを確認する。  
 
 ・【作業中】ORMはSpring Data JPAのEntityManagerを使用して、CRUDメソッドを構築する。  
-EntityクラスとModelクラスを分けたいが、Mappingが必要。
+EntityクラスとModelクラスを分けるか検討中。分ける場合はMappingが必要。
 
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
 
