@@ -10,7 +10,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.example.domainmodel.model.account.Account;
+import com.example.domainmodel.model.account.*;
+import com.example.domainservice.repository.account.*;
 
 /**
  * 資格情報とユーザーの状態をデータストアから取得するためのUserDetailsServiceの実装
