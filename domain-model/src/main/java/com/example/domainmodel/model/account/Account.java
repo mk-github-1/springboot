@@ -6,6 +6,7 @@ import java.util.List;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 import lombok.EqualsAndHashCode;
@@ -38,7 +39,7 @@ public class Account {
 	@Column(nullable = false)
 	private LocalDateTime updated_at;
 
-	@Column(nullable = true)
+	@OneToMany
 	private List<String> roleList;
 
 	public Boolean isAdmin() {

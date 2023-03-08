@@ -25,6 +25,7 @@ EclipseのTerminalで次のコマンドを実行
 
 (Gradleビルド)
 	gradle build
+	gradle clean build
 
 --------------------------------------------------
 

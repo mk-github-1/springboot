@@ -13,9 +13,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 /**
- * Personモデル
+ * Person
  *　
- * ※@Setterは使用しないで下さい
  */
 @Entity
 @Table(name="person")
