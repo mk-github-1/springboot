@@ -1,5 +1,6 @@
 package com.example.userinterface.config;
 
+/*
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
@@ -14,12 +15,14 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import jakarta.persistence.EntityManagerFactory;
+ */
 
 /**
  * JpaのConfig
  *
  * 'Spring徹底入門'を引用
  */
+/*
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("com.example.applicationservice")
@@ -27,16 +30,12 @@ public class JpaConfig {
 
 	private final DataSource dataSource;
 
-    /**
-	 * constructor
-	 */
+    // constructor
 	public JpaConfig(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
 
-    /**
-	 * JpaVenderAdapterのBean定義を行う
-	 */
+    // JpaVenderAdapterのBean定義を行う
 	@Bean
 	public JpaVendorAdapter jpaVendorAdapter() {
 		// JPA実装の独自設定を行うため、JpaVenderAdapterインタフェースの実装クラスのBeanを定義する
@@ -51,9 +50,7 @@ public class JpaConfig {
 		return hibernateJpaVendorAdaptor;
 	}
 
-    /**
-	 *　LocalContainerEntityManagerFactoryBeanのBean定義を行う
-	 */
+    // LocalContainerEntityManagerFactoryBeanのBean定義を行う
 	@Bean
 	public LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean(DataSource dataSource) {
 		// LocalContainerEntityManagerFactoryBeanを定義し、指定されたJPAが提供するEntityManagerFactoryがBeanとしてDIコンテナ上で管理されるようにする
@@ -71,9 +68,7 @@ public class JpaConfig {
 		return localContainerEntityManagerFactoryBean;
 	}
 
-    /**
-	 *　PlatformTransactionManagerのBean定義を行う ※JpaTransactionManager（@Transactional）の利用
-	 */
+    // PlatformTransactionManagerのBean定義を行う ※JpaTransactionManager（@Transactional）の利用
 	@Bean
 	public PlatformTransactionManager platformTransactionManager(EntityManagerFactory entityManagerFactory) {
 		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
@@ -81,3 +76,4 @@ public class JpaConfig {
 		return jpaTransactionManager;
 	}
 }
+ */
