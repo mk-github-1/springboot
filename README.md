@@ -45,10 +45,8 @@ PostgreSQLのテーブル修正。
 ログイン関係のプログラム修正。  
 修正後、ログインできることを確認する。  
 
-・【作業中】ORMはHibernateを利用する  
-HibernateのDaoを作成する。PersonRepositoryを作成する。  
-Serviceの実装に@Transationalを使用できるようにする。  
-GenericRepositoryインタフェースを作る。  
+・【作業中】ORMはSpring Data JPAのEntityManagerを使用して、CRUDメソッドを構築する。  
+インタフェースの親のGenericRepositoryインタフェースを作る。  
 EntityクラスとModelクラスを分けたいが、Mappingが必要(RepositoryでMapper？)
 
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
@@ -58,7 +56,7 @@ EntityクラスとModelクラスを分けたいが、Mappingが必要(Repository
 
 ・データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
 
-・サーバー側を非同期処理に対応する。(クライアント側はjavascript管理下で、axiosで対応予定。)
+・非同期処理に対応する。WebFluxと@Asyncの組み合わせ？(クライアント側はjavascript管理下で、axiosで対応予定。)
 
 　**************************************************  
 
@@ -170,7 +168,10 @@ EclipseでServersのタブを表示させて、そこにApache Tomcatのパス�
 
 ・Eclipseにlombokをインストールをします。
 .\eclipse\jee-2022-12\eclipse\pluginsフォルダにあるlombok.jarをダブルクリックしてインストーラーを実行して設定します。  
-Eclipseの各プロジェクト設定の、Javaのビルドパスに外部JARとしてlombok.jarを設定します。  
+
+・domainmodelプロジェクトにlombok.jarとjakarta.persistence-apiを外部JARとして追加する。  
+
+・applicationserviceプロジェクトにjakarta.transaction-apiを外部JARとして追加する。  
 
 ## PostgreSQL設定  
 
