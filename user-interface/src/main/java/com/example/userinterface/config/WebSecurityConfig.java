@@ -66,6 +66,7 @@ public class WebSecurityConfig {
     /**
 	 *　AuthenticationManagerのBean定義を行う ※Spring徹底入門の手順は古いので使用できない
 	 */
+    /*
     @Bean
     public AuthenticationManager authenticationManager(){
         // 【このオブジェクト生成は書き方が違うかもしれない】
@@ -79,6 +80,7 @@ public class WebSecurityConfig {
 
         return new ProviderManager(daoAuthenticationProvider);
     }
+     */
 
     /**
 	 *　DaoAuthenticationProviderにPasswordEncoderを設定する
