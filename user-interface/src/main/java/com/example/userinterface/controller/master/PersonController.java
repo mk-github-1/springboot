@@ -2,6 +2,7 @@ package com.example.userinterface.controller.master;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 // import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,7 @@ import com.example.domainmodel.model.master.*;
 
 /**
  * PersonController
- * 
+ *
  */
 // @RestController
 @Controller
@@ -22,7 +23,10 @@ public class PersonController {
 
 	private final PersonService _personService;
 
-	// @Autowiredは省略可能
+    /**
+	 * constructor
+	 */
+	@Autowired
 	public PersonController(PersonService personService) {
 		this._personService = personService;
 	}

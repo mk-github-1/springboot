@@ -2,6 +2,7 @@ package com.example.applicationservice.service.implement.master;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class PersonServiceImplements implements PersonService {
     /**
 	 * constructor
 	 */
+	@Autowired
 	public PersonServiceImplements(PersonRepository personRepository) {
 		this._personRepository = personRepository;
 	}
