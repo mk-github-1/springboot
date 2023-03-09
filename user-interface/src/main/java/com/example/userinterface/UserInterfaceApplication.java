@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
  * UserInterfaceApplication
  *
  */
+@ComponentScan("com.example.applicationservice", "com.example.infrastructure")
 @SpringBootApplication
 public class UserInterfaceApplication {
 
