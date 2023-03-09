@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * ApplicationのConfig
- * Spring DIをConfiguration方法
+ * Spring DIをConfiguration方法で利用する
  * 主にコンポーネントスキャンによる自動登録ができない時に使用
  * 通常はアノテーション方法(@Service, @Repository, @Component)でOK
  *
