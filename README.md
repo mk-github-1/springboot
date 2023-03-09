@@ -13,7 +13,7 @@ DBの操作を行うことができるアプリケーションを構築します
 #### (扱う技術としては下記を考えています)
 Java(JDK17), SpringBoot3, PostgreSQL 15, Gradle 7.6, javascript(またはtypescript)  
 Node.js(npm, Webpack用),  
-html, css, Tailwind CSSまたはBootstrap5, React 18,
+html, css, Bootstrap5(Tailwind CSSは使わないかも), React 18,
 
 他言語Webフレームワーク、Vue.jsを経験してますが、Java, SpringBoot, Reactはほぼ素人です。  
 
@@ -57,8 +57,11 @@ EntityクラスとModelクラスを分けるか検討中。分ける場合はMap
 
 ・Eclipseのデバッグのステップ実行が止まりたいところで止まらないので調べる。  
 
-・サーバー側のプログラムを一通り実装する。AOPによる例外処理も追加する。(@AfterThrowingで実施)  
-サーバー側のvalidation(@RequestBody @Validatedを追加する。
+・サーバー側のプログラムを一通り実装する。AOPによる例外処理を@AfterThrowingで実施する。  
+サーバー側のvalidationを追加する。
+
+validation無し: @RequestBody  
+validation有り: @RequestBody @Validated  
 
 ・非同期処理に対応する。WebFluxと@Asyncの組み合わせ？(クライアント側はjavascript管理下で、axiosで対応予定。)
 
@@ -69,7 +72,7 @@ webpack.config.jsの設定をして、javascriptをモジュールとして使�
 ただし、webpack.config.jsの設定が難しい。  
 
 ③画面デザインにCSSフレームワークを適用し、デザインを修正する。  
-(TailwindCSS、またはBootStrap5を使用予定)  
+BootStrap5を使用予定。  
 
 ④SpringSecurityのログイン修正  
 SpringSecurityを利用して  
