@@ -14,13 +14,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ApplicationConfig {
 
-    /**
-	 * constructor
-	 */
-	public ApplicationConfig() {
-
-	}
-
 	/* 例
 	@Bean
 	PersonRepository personRepository() {
