@@ -4,6 +4,7 @@ import java.util.*;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
@@ -26,7 +27,10 @@ public class PersonRepositoryImplements implements PersonRepository {
 
 	@PersistenceContext
 	public EntityManager entityManager;
-
+	
+    /**
+	 * constructor
+	 */
 	public PersonRepositoryImplements() {
 		super();
 	}
@@ -73,7 +77,7 @@ public class PersonRepositoryImplements implements PersonRepository {
 		);
          */
 
-		// setterがだめならmergeしかない
+		// setterがだめならmergeしかないが競合チェックができるかわからない
 		entityManager.merge(person);
 
 		return person;
@@ -89,7 +93,24 @@ public class PersonRepositoryImplements implements PersonRepository {
 
 	@Override
 	public void sort(Dictionary<Long, Long> ids) {
-		// SQLで書く
+		// SQLは下書き
+		Query query = entityManager.createQuery("UPDATE [dbo].[m_persons] \"\r\n"
+			+ " SET [order] = B.[order] \"\r\n"
+			+ " FROM [dbo].[m_persons] AS A \"\r\n"
+			+ " LEFT OUTER JOIN ( \"\r\n"
+			+ "    SELECT C.[id], ROW_NUMBER() OVER ( \"\r\n"
+			+ "        ORDER BY \"\r\n"
+			+ "            C.[is_deleted] ASC, \"\r\n"
+			+ "            D.[order] ASC, \"\r\n"
+			+ "            C.[updated_at] DESC \"\r\n"
+			+ "     ) AS 'Order' \"\r\n"
+			+ "     FROM [dbo].[m_persons] AS C \"\r\n"
+			+ "     LEFT OUTER JOIN @temp AS D \"\r\n"
+			+ "     ON C.[Id] = D.[Id] \"\r\n"
+			+ " ) AS B \"\r\n"
+			+ " ON A.[Id] = B.[Id] \"\r\n"
+			+ " WHERE B.[Id] IS NOT NULL");
 
+		query.getResultList();
 	}
 }

@@ -16,7 +16,8 @@ CREATE TABLE public.login_user
     name character varying(256) NOT NULL,
     password character varying(256) NOT NULL,
     created_at timestamp NOT NULL,
-    updated_at timestamp NOT NULL
+    updated_at timestamp NOT NULL,
+    version timestamp NOT NULL
 )
 
 TABLESPACE pg_default;
@@ -30,7 +31,8 @@ CREATE TABLE public.role
 (
     name character varying(32) PRIMARY KEY,
     created_at timestamp NOT NULL,
-    updated_at timestamp NOT NULL
+    updated_at timestamp NOT NULL,
+    version timestamp NOT NULL
 )
 
 TABLESPACE pg_default;
@@ -46,6 +48,7 @@ CREATE TABLE public.user_role
     role_id character varying(32),
     created_at timestamp NOT NULL,
     updated_at timestamp NOT NULL,
+    version timestamp NOT NULL
     CONSTRAINT pk_user_role PRIMARY KEY (user_id, role_id),
 	CONSTRAINT fk_user_role_user_id FOREIGN KEY (user_id) REFERENCES public.login_user (email)
 		ON UPDATE NO ACTION ON DELETE NO ACTION,
@@ -70,7 +73,8 @@ CREATE TABLE public.person
     old_id integer,
     "order" integer NOT NULL,
     created_at timestamp NOT NULL,
-    updated_at timestamp NOT NULL
+    updated_at timestamp NOT NULL,
+    version timestamp NOT NULL
 )
 
 TABLESPACE pg_default;

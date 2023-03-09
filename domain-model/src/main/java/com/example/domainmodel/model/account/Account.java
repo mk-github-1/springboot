@@ -1,14 +1,17 @@
 package com.example.domainmodel.model.account;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
-
+import jakarta.persistence.Version;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
@@ -33,10 +36,14 @@ public class Account {
 	private String password;
 
 	@Column(nullable = false)
-	private LocalDateTime created_at;
+	private Date created_at;
 
 	@Column(nullable = false)
-	private LocalDateTime updated_at;
+	private Date updated_at;
+
+	@Version
+	@Column(nullable = false)
+	private Timestamp version;
 
 	@OneToMany
 	private List<String> roleList;
@@ -44,4 +51,16 @@ public class Account {
 	public Boolean isAdmin() {
 		return true;
 	}
+
+	@PrePersist
+    public void prePersist() {
+        Date date = new Date();
+        created_at = date;
+        updated_at = date;
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+    	updated_at = new Date();
+    }
 }

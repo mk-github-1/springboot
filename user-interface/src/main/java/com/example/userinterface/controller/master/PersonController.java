@@ -3,7 +3,9 @@ package com.example.userinterface.controller.master;
 import java.util.*;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 // import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;
@@ -38,11 +40,11 @@ public class PersonController {
 		return this._personService.findById(id);
 	}
 
-	public void create(Person person) {
+	public void create(@RequestBody @Validated Person person) {
 		this._personService.create(person);
 	}
 
-	public void edit(Person person) {
+	public void edit(@RequestBody @Validated Person person) {
 		this._personService.edit(person);
 	}
 
