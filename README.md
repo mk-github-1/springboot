@@ -39,15 +39,16 @@ gradle buildが通るか確認しながら進めます。
 ・【完了】データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
 →Modelに追加、共通クラスでもいいかも。  
 
-・【作業中】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-→Configuration方法か、Annotation方法でDIできるらしい。  
+・【作業中】Spring DIを利用できるようにする。  
+Configuration方法か、Annotation方法でDIできるらしい。  
+
 Annotation方法はApplicationにComponentScanが必要。  
 @ComponentScan("com.example.applicationservice", "com.example.infrastructure")  
 Configuration方法はこの限りでない。
 
-・【作業中】SpringSecurity6でJWT認証を使用するように修正  
-PostgreSQLのテーブル修正。Postgres⇆H2で切替できてもいいかも。    
-画面はデフォルト仕様のものをオリジナルで作る。  
+・【作業中】SpringSecurity6でJWT認証を使用するようにする。  
+アカウント関係はPostgres ⇆ H2で切替できるようにしてもいいかも。    
+画面はデフォルト仕様のものをオリジナルで作る。※デフォルトのCSSはBootstrap？  
 ログイン関係のプログラム修正。  
 修正後、ログインできることを確認する。  
 
