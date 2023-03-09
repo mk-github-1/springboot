@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * ApplicationのConfig
- * Spring DIをConfiguration方法で使用する用、今回は多分使用しない。
+ * Spring DIをConfiguration方法
+ * 主にコンポーネントスキャンによる自動登録ができない時に使用
+ * 通常はアノテーション方法(@Service, @Repository, @Component)でOK
  *
  * 'Spring徹底入門'を引用
  */
@@ -18,13 +20,6 @@ public class ApplicationConfig {
 	public ApplicationConfig() {
 
 	}
-
-	// Java configuration方法
-	// 主にコンポーネントスキャンによる自動登録ができない（例. 外部ライブラリに含まれるクラスをBeanとして登録する）場合に使われる。
-	// ↓
-	//
-	// 通常はアノテーションベースConfigurationでOK　（@Service, @Repository, @Component）
-    // @Autowiredは省略可能
 
 	/* 例
 	@Bean
