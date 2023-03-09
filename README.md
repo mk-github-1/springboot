@@ -50,7 +50,8 @@ Configuration方法は設定クラスに書くやつ。
 アカウント関係はPostgres ⇆ H2で切替できるようにしてもいいかも。    
 画面はデフォルト仕様のものをオリジナルで作る。※デフォルトのCSSはBootstrap？  
 ログイン関係のプログラム修正。  
-修正後、ログインできることを確認する。  
+初回ログインページを表示し、ログインできることを確認する。    
+ログイン後はHomeへ画面遷移し、Personへ画面遷移できるようにする。  
 
 ・【作業中】ORMはSpring Data JPAのEntityManagerを使用して、CRUDメソッドを構築する。  
 EntityクラスとModelクラスを分けるか検討中。分ける場合はMappingが必要。
@@ -67,39 +68,32 @@ validation有り: @RequestBody @Validated
 
 　**************************************************  
 
-②Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする。  
+②Bootstrap5を使いたいので先にやるかも。  
+Node.jsのnpmでnode_modulesをインストール、webpackを利用できるようにする。  
 webpack.config.jsの設定をして、javascriptをモジュールとして使用できるようにする。  
 ただし、webpack.config.jsの設定が難しい。  
 
-③画面デザインにCSSフレームワークを適用し、デザインを修正する。  
-BootStrap5を使用予定。  
+③Person画面を修正する。  
 
-④SpringSecurityのログイン修正  
-SpringSecurityを利用して  
-初回ページはログインページを表示する。  
-→ログイン後にHomeControllerでHomeに画面遷移する。  
-→ HomeからPersonControllerでPersonへ画面遷移する。  
-をできるようにする。  
-
-⑤Person画面にReactを利用する  
+④Person画面にReactを利用する  
 Person画面をReactを利用して画面構築する。(この時点ではMPA)  
-画面からPersonControllerにAPIアクセスする。  
+画面からPersonControllerにAPIアクセスできるようにする。   
 
-⑥画面からの動作確認  
+⑤画面からの動作確認  
 画面からの動作確認と、各セキュリティ(ログイン認証、入力検証、CSRF対策など)が動作していることを確認する。  
 
-⑦SpringBoot上でReactを利用してSPA対応    
+⑥SpringBoot上でReactを利用してSPA対応    
 Springログイン関係を除いて、Reactを利用してSPA対応する。   
 メインのindex.htmlは共通テンプレートとして作成が必要。  
 画面はReactのjavascriptファイル(JSX)となる。  
 React routerで画面切り替えをできるようにする。  
 クライアント側の入力チェックの方法を検討(model_and_viewの設定値を渡して画面に使いたい)    
 
-⑧ユーザー登録処理を実装する  
+⑦ユーザー登録処理を実装する  
 ユーザー登録、本人確認、パスワードリマインダー、個人設定の編集、  
 管理者権限以上での権限変更の機能を実装する。  
 
-⑨2段階認証の実装  
+⑧2段階認証の実装  
 2段階認証を実装する。  
 
 
