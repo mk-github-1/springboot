@@ -40,9 +40,10 @@ gradle buildが通るか確認しながら進めます。
 →Modelに追加、共通クラスでもいいかも。  
 
 ・【作業中】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-→Bean定義しなくても、Configuration方法でDIできるらしい。  
-ただし、ApplicationにComponentScanが必要。  
+→Configuration方法か、Annotation方法でDIできるらしい。  
+Annotation方法はApplicationにComponentScanが必要。  
 @ComponentScan("com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel")  
+Configuration方法はこの限りでない。
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
 PostgreSQLのテーブル修正。Postgres⇆H2で切替できてもいいかも。    
