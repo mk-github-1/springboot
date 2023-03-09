@@ -42,7 +42,7 @@ gradle buildが通るか確認しながら進めます。
 ・【作業中】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
 →Configuration方法か、Annotation方法でDIできるらしい。  
 Annotation方法はApplicationにComponentScanが必要。  
-@ComponentScan("com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure")  
+@ComponentScan("com.example.applicationservice", "com.example.infrastructure")  
 Configuration方法はこの限りでない。
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
