@@ -36,11 +36,13 @@ gradle buildが通るか確認しながら進めます。
 ①直近で実現したいこと **************************************************  
 ここでは例としてPersonクラスを使用し、Reactはまだ考えず、下記を優先で実施します。  
 
-・【完了】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
-→Bean定義しなくても、Configuration方法でDIできているっぽい(動作確認未)  
-
 ・【完了】データ保存時の作成日時、更新日時の更新、競合チェック処理を追加する。  
 →Modelに追加、共通クラスでもいいかも。  
+
+・【作業中】Gradleマルチプロジェクト中のPersonController, PersonServiceでSpring DIを利用できるようにする。  
+→Bean定義しなくても、Configuration方法でDIできるらしい。  
+ただし、ApplicationにComponentScanが必要。  
+@ComponentScan("com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel")  
 
 ・【作業中】SpringSecurity6でJWT認証を使用するように修正  
 PostgreSQLのテーブル修正。Postgres⇆H2で切替できてもいいかも。    
