@@ -44,7 +44,7 @@ Configuration方法か、Annotation方法でDIできるらしい。
 
 Annotation方法はApplicationにComponentScanが必要。  
 @ComponentScan("com.example.applicationservice", "com.example.infrastructure")  
-Configuration方法はこの限りでない。
+Configuration方法は設定クラスに書くやつ。  
 
 ・【作業中】SpringSecurity6でJWT認証を使用するようにする。  
 アカウント関係はPostgres ⇆ H2で切替できるようにしてもいいかも。    
