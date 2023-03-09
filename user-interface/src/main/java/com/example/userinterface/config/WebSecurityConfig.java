@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import com.example.userinterface.account.AccountUserDetailsService;
+// import com.example.userinterface.account.AccountUserDetailsService;
 
 /**
  * WebSecurityのConfig
@@ -27,14 +27,16 @@ import com.example.userinterface.account.AccountUserDetailsService;
 @EnableMethodSecurity
 public class WebSecurityConfig {
 
-	AccountUserDetailsService accountUserDetailsService;
+	// AccountUserDetailsService accountUserDetailsService;
 
     /**
 	 * constructor
 	 */
+	/*
 	public WebSecurityConfig(AccountUserDetailsService accountUserDetailsService) {
 		this.accountUserDetailsService = accountUserDetailsService;
 	}
+     */
 
     /**
 	 * SecurityFilterChainのBean定義を行う
