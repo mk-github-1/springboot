@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * ApplicationのConfig
+ * Spring DIをConfiguration方法で使用する用、今回は多分使用しない。
  *
  * 'Spring徹底入門'を引用
  */
