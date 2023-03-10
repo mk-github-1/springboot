@@ -28,7 +28,6 @@ public class PersonServiceImplements implements PersonService {
     /**
 	 * constructor
 	 */
-	@Autowired
 	public PersonServiceImplements(PersonRepository personRepository) {
 		this._personRepository = personRepository;
 	}

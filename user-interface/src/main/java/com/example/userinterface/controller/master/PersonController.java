@@ -26,7 +26,6 @@ public class PersonController {
     /**
 	 * constructor
 	 */
-	@Autowired
 	public PersonController(PersonService personService) {
 		this._personService = personService;
 	}
