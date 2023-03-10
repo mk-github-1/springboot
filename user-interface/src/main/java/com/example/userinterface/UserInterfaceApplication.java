@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * UserInterfaceApplication
  *
  */
-@ComponentScan({"com.example.applicationservice", "com.example.infrastructure"})
+@ComponentScan({"com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel"})
 @SpringBootApplication
 public class UserInterfaceApplication {
 
