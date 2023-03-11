@@ -2,7 +2,7 @@ package com.example.applicationservice.service.implement.master;
 
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +21,7 @@ import com.example.domainservice.repository.master.*;
 @Transactional
 @Async
 @Service
+@EnableConfigurationProperties(PersonServiceImplements.class)
 public class PersonServiceImplements implements PersonService {
 
 	private final PersonRepository _personRepository;

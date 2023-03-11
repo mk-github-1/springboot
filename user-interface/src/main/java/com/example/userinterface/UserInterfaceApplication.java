@@ -6,14 +6,12 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 // import org.springframework.context.ApplicationContext;
 // import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * UserInterfaceApplication
  *
  */
-@ComponentScan({"com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel"})
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel"})
 public class UserInterfaceApplication {
 
 	/**
