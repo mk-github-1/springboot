@@ -2,7 +2,7 @@ package com.example.applicationservice.service.implement.master;
 
 import java.util.*;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+// import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +11,7 @@ import jakarta.transaction.Transactional;
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;
 import com.example.domainservice.repository.master.*;
+// import com.example.infrastructure.implement.repository.master.*;
 
 // コードはコンパイルを通すための下書きです。
 
@@ -18,10 +19,10 @@ import com.example.domainservice.repository.master.*;
  * PersonServiceImplements
  *　
  */
-@Transactional
+// @EnableConfigurationProperties(PersonServiceImplements.class)
 @Async
 @Service
-@EnableConfigurationProperties(PersonServiceImplements.class)
+@Transactional
 public class PersonServiceImplements implements PersonService {
 
 	private final PersonRepository _personRepository;

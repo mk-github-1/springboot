@@ -11,7 +11,8 @@ import org.springframework.context.annotation.Bean;
  * UserInterfaceApplication
  *
  */
-@SpringBootApplication(scanBasePackages = {"com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel"})
+// @SpringBootApplication(scanBasePackages = {"com.example.userinterface", "com.example.applicationservice", "com.example.infrastructure", "com.example.domainservice", "com.example.domainmodel"})
+@SpringBootApplication(scanBasePackages = {"com.example"})
 public class UserInterfaceApplication {
 
 	/**
@@ -34,7 +35,7 @@ public class UserInterfaceApplication {
 	 * loggingFilter【これはここで良い？ApplicationConfigかも】
 	 */
     @Bean
-    public FilterRegistrationBean<?> loggingFilter() {
+    FilterRegistrationBean<?> loggingFilter() {
         FilterRegistrationBean<LoggingFilter> registrationBean = new FilterRegistrationBean<>(new LoggingFilter());
         registrationBean.setOrder(Integer.MIN_VALUE);
         registrationBean.addUrlPatterns("/*");

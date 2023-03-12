@@ -2,12 +2,12 @@ package com.example.userinterface.controller.master;
 
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 // import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.example.applicationservice.service.implement.master.*;
 import com.example.applicationservice.service.master.*;
 import com.example.domainmodel.model.master.*;
 
@@ -26,6 +26,7 @@ public class PersonController {
     /**
 	 * constructor
 	 */
+	// annotation方法を辞めてConfiguration方法の方がいいかも
 	public PersonController(PersonService personService) {
 		this._personService = personService;
 	}

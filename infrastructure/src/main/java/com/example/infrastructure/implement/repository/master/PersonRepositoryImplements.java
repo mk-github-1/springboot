@@ -9,7 +9,7 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+// import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 
@@ -22,9 +22,9 @@ import com.example.domainservice.repository.master.*;
  * PersonRepositoryImplements
  *
  */
-@Repository
+//@EnableConfigurationProperties(PersonRepositoryImplements.class)
 @Async
-@EnableConfigurationProperties(PersonRepositoryImplements.class)
+@Repository
 public class PersonRepositoryImplements implements PersonRepository {
 
 	@PersistenceContext

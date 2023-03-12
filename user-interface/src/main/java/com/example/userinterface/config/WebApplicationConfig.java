@@ -15,7 +15,7 @@ public class WebApplicationConfig /* extends WebMvcConfigurerAdapter */ {
 	 *　OpenEntityManagerInViewInterceptorのBean定義を行う
 	 */
 	@Bean
-	public OpenEntityManagerInViewInterceptor openEntityManagerInViewInterceptor() {
+	OpenEntityManagerInViewInterceptor openEntityManagerInViewInterceptor() {
 		return new OpenEntityManagerInViewInterceptor();
 	}
 

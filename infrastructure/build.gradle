@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '3.0.2'
+	id 'org.springframework.boot' version '3.0.4'
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'java'
 }
@@ -10,6 +10,10 @@ sourceCompatibility = '17'
 
 bootJar {
 	enabled = false
+}
+
+jar {
+	enabled = true
 }
 
 configurations {
@@ -36,6 +40,5 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.integration:spring-integration-jpa'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
