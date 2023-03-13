@@ -32,6 +32,7 @@ dependencies {
 	implementation project(':domain-service')
 	implementation project(':application-service')
 
+	implementation 'org.springframework:spring-context:5.3.9'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
@@ -69,9 +70,9 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 }
 
-application {
+springBoot {
     // Define the main class for the application.
-    mainClass = 'com.example.user_interface.UserInterfaceApplication'
+    mainClass = 'com.example.userinterface.UserInterfaceApplication'
 }
 
 tasks.named('test') {
